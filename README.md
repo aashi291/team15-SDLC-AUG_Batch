@@ -13,4 +13,4 @@ This Trading Strategy Tester's various festivities include:
 1. Can make buy and sell recommendations based on stock prices.csv document
 2. Backtesting the strategy on stocks is simple by downloading the.csv file from nseindia.com.
 3. Provides the date and price at which the stock can be purchased and sold.
-4. It is compatible with both Windows and Linux.
+
