@@ -17,6 +17,8 @@ This Trading Strategy Tester's various festivities include:
 
 
 ## SWOT Analysis
+![SWOT](https://user-images.githubusercontent.com/86605697/130112556-7f1c0310-7635-4fd4-ac64-84ac16d0e38f.png)
+
 
 
 ## 4W's and 1'H
