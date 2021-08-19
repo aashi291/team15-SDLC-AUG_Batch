@@ -9,6 +9,37 @@
 This Trading Strategy Tester's various festivities include:
 
 1. Can make buy and sell recommendations based on stock prices.csv document
-2. Backtesting the strategy on stocks is simple by downloading the.csv file from nseindia.com.
+2. Back testing the strategy on stocks is simple by downloading the.csv file from nseindia.com.
 3. Provides the date and price at which the stock can be purchased and sold.
+
+
+## Defining the System
+
+
+## SWOT Analysis
+
+
+## 4W's and 1'H
+
+### Who
+This module targets the Retail Traders.
+### What
+This utility is used to back test the rule based trading strategy.
+### When
+This can be used to the retail trader want to test new trading strategy or check it the strategy works on a perticular stock.
+### Where
+This can be used in stock market.
+### How
+The utility can be used by giving .csv file of any stock which can be easily downloaded from nseindia.com.
+
+# Detail Requirements
+## High Level Requirements:
+
+| ID | Description | Status |
+|:---:|:---:|:---:|
+
+
+## Low Level Requirements:
+| ID | Description | HR_ID | Status |
+|:---:|:---:|:---:|:---:|
 
