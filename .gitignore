@@ -1,0 +1,6 @@
+  
+*.gcda
+*.gcno
+*.json
+*.vscode
+*unity*
