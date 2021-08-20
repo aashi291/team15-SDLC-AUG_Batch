@@ -24,7 +24,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005807 | AASHI  LAHORI          | Relative Strength Index
  99005834 | Sourav  Sudarshan      | Money Flow Index
  99005762 | Kunal Kishore Mozarkar | Exponential Moving Average
- 99005791 | S  Rekha               | mean reversion
+ 99005791 | S  Rekha               | Bollinger Bands
  99005816 | Pushkar Pramod Wani    | Pivot points
 
 ## Challenges Faced and How Was It Overcome
