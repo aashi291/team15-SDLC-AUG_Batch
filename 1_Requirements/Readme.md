@@ -39,7 +39,10 @@ The utility can be used by giving .csv file of any stock which can be easily dow
 
 | ID | Description | Status |
 |:---:|:---:|:---:|
-
+| HR_01 | Plot Graph | |
+| HR_02 | Plot Indicators | |
+| HR_03 | Trade Calls | |
+| HR_04 | Back Test Results | |
 
 ## Low Level Requirements:
 | ID | Description | HR_ID | Status |
