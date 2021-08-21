@@ -28,7 +28,7 @@ This module targets the Retail Traders.
 ### What
 This utility is used to back test the rule based trading strategy.
 ### When
-This can be used to the retail trader want to test new trading strategy or check it the strategy works on a perticular stock.
+This can be used to the retail trader want to test new trading strategy or check it the strategy works on a particular stock.
 ### Where
 This can be used in stock market.
 ### How
@@ -37,12 +37,14 @@ The utility can be used by giving .csv file of any stock which can be easily dow
 # Detail Requirements
 ## High Level Requirements:
 
-| ID | Description | Status |
-|:---:|:---:|:---:|
-| HR_01 | Plot Graph | |
-| HR_02 | Plot Indicators | |
-| HR_03 | Trade Calls | |
-| HR_04 | Back Test Results | |
+| ID     | Description | Status |
+|:------:|:-----------:|:---:|
+| HR_01  | Implement Moving Average Convergence Divergence strategy
+| HR_02  | Implement strategy
+| HR_03  | Implement strategy
+| HR_04  | Implement strategy
+| HR_05  | Implement strategy
+
 
 ## Low Level Requirements:
 | ID | Description | HR_ID | Status |
