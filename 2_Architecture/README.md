@@ -1,6 +1,7 @@
 # Architecture
 
-## Behaviour Diagrams
+## Behavioural Diagrams
+![High level Behavioural Diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Behavioural%20Diagram.png)
 
 ### Low Level Diagram
 ![Low Level Behavioural Diagram for EMA](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/EMA_B.PNG)
