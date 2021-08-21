@@ -11,6 +11,7 @@ Folder                | Description
 `2_Architecture`      | Documents specifying design details
 `3_Implementation`    | All code and documentation
 `4_TestPlanAndOutput` | Documents with test plans and procedures
+ 5_Documentation
 
 ## Contributors List and Summary
 
