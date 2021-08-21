@@ -37,13 +37,20 @@ The utility can be used by giving .csv file of any stock which can be easily dow
 # Detail Requirements
 ## High Level Requirements:
 
-| ID     | Description | Status |
-|:------:|:-----------:|:---:|
-| HR_01  | Implement Moving Average Convergence Divergence strategy
-| HR_02  | Implement strategy
-| HR_03  | Implement strategy
-| HR_04  | Implement strategy
-| HR_05  | Implement strategy
+| ID     |                    Description                           |      Status     |
+|:------:|:--------------------------------------------------------:|:---------------:|
+| HR_01  | Implement Moving Average Convergence Divergence strategy |   |
+| HR_02  | Implement Double Exponential Moving Average strategy     |   |
+| HR_03  | Implement Williams %R strategy                           |   |
+| HR_04  | Implement Weighted Moving Average strategy               |   |
+| HR_05  | Implement hull moving average strategy                   |   |
+| HR_06  | Implement Relative Strength Index strategy               |   |
+| HR_07  | Implement Money Flow Index strategy                      |   |
+| HR_08  | Implement Exponential Moving Average strategy            |   |
+| HR_09  | Implement Bollinger Bands strategy                       |   |
+| HR_10  | Implement Pivot points strategy                          |   |
+| HR_11  | BackTesting to find performance of strategy              |   |
+| HR_12  | Display results                                          |   |
 
 
 ## Low Level Requirements:
