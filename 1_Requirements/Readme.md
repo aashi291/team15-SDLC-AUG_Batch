@@ -48,7 +48,7 @@ The utility can be used by giving .csv file of any stock which can be easily dow
 | HR_07  | Implement Money Flow Index strategy                      |   |
 | HR_08  | Implement Exponential Moving Average strategy            |   |
 | HR_09  | Implement Bollinger Bands strategy                       |   |
-| HR_10  | Implement Pivot points strategy                          |   |
+| HR_10  | Implement Stochastic Indicator                           |   |
 | HR_11  | BackTesting to find performance of strategy              |   |
 | HR_12  | Display results                                          |   |
 
