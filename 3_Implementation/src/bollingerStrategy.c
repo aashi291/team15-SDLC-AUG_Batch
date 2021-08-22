@@ -70,7 +70,7 @@ void boilingerStrategy(char * filePath)
     bbTotalLoss = (bbTotalLoss==0)?1:bbTotalLoss;
     bbProfitFactor = bbTotalProfit/bbTotalLoss;
     bbProfitablePercnt = (bbProfitableTrades/(bbTradeNo-2))*100;
-    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %d ||\t|| Profit Factor: %0.3f ||\n\n", (bbTradeNo-1), bbProfitablePercnt,bbTotalpl, bbProfitFactor);
+    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %d ||\t|| Profit Factor: %0.3f ||\n\n", (bbTradeNo-2), bbProfitablePercnt,bbTotalpl, bbProfitFactor);
 
     free(filePath);
     return;
