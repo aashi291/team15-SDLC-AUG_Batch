@@ -33,7 +33,10 @@ SRC = src/readColoumn.c\
 src/readDate.c\
 src/sma.c\
 src/smaCrossover.c\
-src/smaStrategy.c
+src/smaStrategy.c\
+src/bollingerBands.c\
+src/bollingerCrossover.c\
+src/bollingerStrategy.c
 
 # All test source files
 TEST_SRC = test/testMain.c\

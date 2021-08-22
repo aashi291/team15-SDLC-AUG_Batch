@@ -46,6 +46,52 @@ float sma(int days, int crtday, float *coloumnArray);
  */
 _Bool smaCrossover( int sm1, int sm2, int crtday, float *coloumnArray);
 
+/**
+ * @brief The function executes the SMA Strategy by considering the user choices
+ * 
+ * @param file 
+ */
 void smaStrategy(char *file);
+
+/**
+ * @brief This function calculates the middle band moving average for a given trading day based on the closing prices.
+ * 
+ * @return float 
+ */
+float movingMiddleBand(int noOfDaysMA, int presentDay,float* closePriceColumn);
+
+/**
+ * @brief This function calaculates the standard deviation of a given trading day closing price from the middle band average.
+ * 
+ * @return float 
+ */
+float stdDev(int noOfDaysMA, int presentDay,float* closePriceColumn);
+
+/**
+ * @brief This function calculates the upper bollinger band of a given trading day.
+ *  
+ * @return float 
+ */
+float upperBand(int mulFactor,int noOfDaysMA,int presentDay,float* closPriceColumn);
+
+/**
+ * @brief This function calculates the lower bollinger band of a given trading day.
+ * 
+ * @return float 
+ */
+float lowerBand(int mulFactor,int noOfDaysMA,int presentDay,float* closPriceColumn);
+
+/**
+ * @brief This function indicates the buy or sell signals based on the condition consisting of the upperband value,lowerband value and the closing price value.
+ * 
+ * @return _Bool 
+ */
+_Bool bollingerBandIndicator(int mulFactor,int noOfDaysMA,int presentDay,float* closePriceColumn,float closePriceOnThatDay);
+/**
+ * @brief This function executes the bollinger band strategy on requested .csv file of a stock data and display the respective results 
+ * 
+ * @param filePath 
+ */
+void boilingerStrategy(char * filePath);
 
 #endif
