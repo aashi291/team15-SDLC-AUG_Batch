@@ -3,3 +3,4 @@
 *.gcno
 *.json
 *.vscode
+*.gcov
