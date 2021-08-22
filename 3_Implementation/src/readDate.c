@@ -1,14 +1,14 @@
 #include <header.h>
 
-//fl is the path of csv file and n is the row of which date is required
+//filePath is the path of csv file and n is the row of which date is required
 //returns the requested date
-char *readDate(char *fl, int n){
+char *readDate(char *filePath, int n){
 
-    FILE *file_p = fopen(fl,"r"); // initialize file pointer
+    FILE *file = fopen(filePath,"r"); // initialize file pointer
     
     static char fc[1024];
     //Again check if the file is empty or wrong file name
-    if(file_p == NULL){
+    if(file == NULL){
             perror("Unable to open the file.");
             return 0;
         }
@@ -17,7 +17,7 @@ char *readDate(char *fl, int n){
     int row_count = 0;//count number of rows
     int col_count = 0;//count number of coloumns
 
-    while(fgets(line, sizeof(line), file_p)){
+    while(fgets(line, sizeof(line), file)){
         col_count = 0;//make coloumn 0 after each loop
         row_count++;//append row
 
@@ -28,7 +28,7 @@ char *readDate(char *fl, int n){
         while(field != NULL){
             //check is it a coloumn of date
             if(col_count == 0 && row_count == n){
-                fclose(file_p);
+                fclose(file);
 
                 for(int i=0; i<11;i++){
                     fc[i] = field[i];
@@ -39,6 +39,6 @@ char *readDate(char *fl, int n){
             col_count++;//append coloumn
         }    
     }
-    fclose(file_p);//close file
+    fclose(file);//close file
     return "0";   
 }
