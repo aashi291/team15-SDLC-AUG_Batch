@@ -19,3 +19,7 @@
 ### High Level Diagram
 
 ![High level Behavioural Diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Behavioural%20Diagram.png)
+
+
+### Structural Diagram
+![Structural Diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Structural_Diagram.jpeg)
