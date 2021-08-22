@@ -29,14 +29,15 @@ endif
 MAIN_NAME = main.c
 
 # All source code files
-SRC = src/readColoumn.c\
+SRC = src\readColumn.c\
 src/readDate.c\
 src/sma.c\
 src/smaCrossover.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
 src/bollingerCrossover.c\
-src/bollingerStrategy.c
+src/bollingerStrategy.c\
+src/WillR.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
