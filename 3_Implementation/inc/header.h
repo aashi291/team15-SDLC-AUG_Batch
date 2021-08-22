@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
 /**
  * @brief read everyday closing price of shares from csv files downloaded for nseindia.com
