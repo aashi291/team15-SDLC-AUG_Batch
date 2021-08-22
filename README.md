@@ -18,7 +18,7 @@ Folder                | Description
 SF No.    |          Name          |    Features    | Issues Raised |Issues Resolved|No Test Cases|Test Case Pass
 ----------|------------------------|----------------|----------------|---------------|-------------|--------------
  99005763 | Abhay  Sahu            | Moving Average Convergence Divergence 
- 99005772 | SHREYASI  CHAUDHURI    | Double Exponential Moving Average
+ 99005772 | SHREYASI  CHAUDHURI    | Rate Of Change
  99005839 | Alna Satheesh          | Williams %R
  99005797 | Ramya  Desai           | Weighted Moving Average
  99005769 | RAJIV  ADAK            | hull moving average

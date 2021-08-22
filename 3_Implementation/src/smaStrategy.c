@@ -18,6 +18,7 @@ void smaStrategy(char *filePath){
     {
         printf("\nEnter two different number of days for simple moving average :");
         scanf("%d%d",&sm1,&sm2);
+
         while(sm1>sm2)
         {
             printf("\nEnter the lower number of days first and then the higher number of days: ");
@@ -31,7 +32,7 @@ void smaStrategy(char *filePath){
     tradeNo = number of trades, buyp = buying price, sellp = selling price,
     pl = profit or loss in that trade, totalpl = total profit or loss at the end
     */
-    int tradeNo = 1;
+    int tradeNo = 0;
     float buyp = 0, sellp = 0, pl = 0, totalpl = 0;
     /*
     totalP = total profit made in profitable trades
@@ -51,8 +52,9 @@ void smaStrategy(char *filePath){
             char *date = readDate(filePath,i+1);
             buyp=close[i];
 
-            printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
             tradeNo++;
+            printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
+
             intrade = true;
         }
         else if (!smaCrossover(sm1, sm2, i, close) && intrade){
@@ -74,7 +76,19 @@ void smaStrategy(char *filePath){
 
     totalL = (totalL==0)?1:totalL;
     profitFactor = totalP/totalL;
-    profitblprcnt = (profitbl/(tradeNo-2))*100;
-    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo-2), profitblprcnt, totalpl, profitFactor);
+    profitblprcnt = (profitbl/(tradeNo))*100;
+    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo), profitblprcnt, totalpl, profitFactor);
 
+}
+
+//takes the coloumn from where sma is to be calculated and the prices
+//check crossover of 14 sm1 and 28 sm2
+//returns true if 14 sma is above 28 sma and return false if vise-versa
+_Bool smaCrossover( int sm1, int sm2, int crtday, float *coloumnArray){
+    if ((sma(sm1,(crtday), coloumnArray)>sma(sm2,(crtday), coloumnArray))){        
+        return true;
+    }
+    else if ((sma(sm1,(crtday), coloumnArray)<sma(sm2,(crtday), coloumnArray))){
+        return false;
+    }
 }

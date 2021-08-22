@@ -3,4 +3,4 @@
 *.gcno
 *.json
 *.vscode
-*unity*
+*.gcov

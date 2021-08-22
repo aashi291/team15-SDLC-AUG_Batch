@@ -25,10 +25,10 @@ void boilingerStrategy(char * filePath)
 
     //bb is prefix for the common variables to differentiate it is for bollinger band strategy.[for other strategies change it according]
     int bbTradeNo = 1;// This indicates the total number of trades that can happen. [eg for wma strategy make as wmaTradeNo]
-    int bbBuyp = 0; // This is the price at which the trade can be bought. [follow the above example for your strategies]
-    int bbSellp = 0; //This is the price at which the trade can be sold.
-    int bbProfitLoss = 0; //This is the profit or loss for a single trade.
-    int bbTotalpl = 0;//This the total profit or loss for all trades in a given time period
+    float bbBuyp = 0; // This is the price at which the trade can be bought. [follow the above example for your strategies]
+    float bbSellp = 0; //This is the price at which the trade can be sold.
+    float bbProfitLoss = 0; //This is the profit or loss for a single trade.
+    float bbTotalpl = 0;//This the total profit or loss for all trades in a given time period
     float bbTotalProfit = 0;//This the total profit from the all trades in a given time period.
     float bbTotalLoss = 0;//This is the total loss from  the all trades in a given time period.
     float bbProfitFactor = 0;//This is the profit factor using bollinger bands strategy.
@@ -46,7 +46,7 @@ void boilingerStrategy(char * filePath)
             char *date = readDate(filePath,i+1);
             bbBuyp=closePriceValues[i];
 
-            printf("%d\tBUY\t\t%s\t\t%d\n", bbTradeNo, date, bbBuyp);
+            printf("%d\tBUY\t\t%s\t\t%0.2f\n", bbTradeNo, date, bbBuyp);
             bbTradeNo++;
             bbIntrade = true;// True means the trade is open and allowed to sell the stock 
         }
@@ -61,7 +61,7 @@ void boilingerStrategy(char * filePath)
             bbTotalLoss += abs((bbProfitLoss<0)?bbProfitLoss:0);
             bbProfitableTrades += ((bbProfitLoss>0)?1:0);
             
-            printf("\tSELL\t\t%s\t\t%d\t\t%d\n\n", date, bbSellp, bbProfitLoss);
+            printf("\tSELL\t\t%s\t\t%0.2f\t\t%0.2f\n\n", date, bbSellp, bbProfitLoss);
             
             bbIntrade = false;
         }
@@ -70,7 +70,7 @@ void boilingerStrategy(char * filePath)
     bbTotalLoss = (bbTotalLoss==0)?1:bbTotalLoss;
     bbProfitFactor = bbTotalProfit/bbTotalLoss;
     bbProfitablePercnt = (bbProfitableTrades/(bbTradeNo-2))*100;
-    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %d ||\t|| Profit Factor: %0.3f ||\n\n", (bbTradeNo-1), bbProfitablePercnt,bbTotalpl, bbProfitFactor);
+    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (bbTradeNo-2), bbProfitablePercnt,bbTotalpl, bbProfitFactor);
 
     free(filePath);
     return;

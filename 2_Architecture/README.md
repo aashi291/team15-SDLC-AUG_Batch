@@ -14,8 +14,14 @@
 
 ![Low Level Behavioural Diagram for Stochastic Indicator](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Stochastic%20Indicator.png)
 
+![Low Level Behavioral Diagram for ROC](https://user-images.githubusercontent.com/86352920/130366669-53684615-5fb4-457b-bcdc-d38f8c6d2f39.jpeg)
+
 
 
 ### High Level Diagram
 
 ![High level Behavioural Diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Behavioural%20Diagram.png)
+
+
+### Structural Diagram
+![Structural Diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Structural_Diagram.jpeg)
