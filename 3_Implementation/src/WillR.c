@@ -91,22 +91,22 @@ int findWillR(int dm,float *close,int today, int will,int length)
     if(today<=(length-dm)){
        // printf("\nwillr");
         highestHigh=high[today];
-        printf("hightoday %f " , high[today]);
+       // printf("hightoday %f " , high[today]);
         lowestLow=low[today];
-        printf("lowtoday %f " , low[today]);
+        //printf("lowtoday %f " , low[today]);
         for (int i = today; i<(today+will); i++){
             if(high[i]>highestHigh)
                 highestHigh=high[i];
             if(low[i]<lowestLow)
                 lowestLow=low[i];
         }
-    printf("highest %f " ,highestHigh);
-    printf("lowest %f " ,lowestLow);
-    printf("close %f " ,close);
+   // printf("highest %f " ,highestHigh);
+   // printf("lowest %f " ,lowestLow);
+  //  printf("close %f\n " ,close);
     fclose(fileptr);
 
 WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow));
-printf("\nwilliam\%R %f" , WillR);
+//printf("\nwilliam\%R %f" , WillR);
 return WillR;
     } 
 }
