@@ -23,10 +23,10 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005797 | Ramya  Desai           | Weighted Moving Average
  99005769 | RAJIV  ADAK            | hull moving average
  99005807 | AASHI  LAHORI          | Relative Strength Index
- 99005834 | Sourav  Sudarshan      | Money Flow Index
+ 99005834 | Sourav  Sudarshan      | Money Flow Index Indicator
  99005762 | Kunal Kishore Mozarkar | Exponential Moving Average
  99005791 | S  Rekha               | Bollinger Bands
- 99005816 | Pushkar Pramod Wani    | Pivot points
+ 99005816 | Pushkar Pramod Wani    | Stochastic Indicator
 
 ## Challenges Faced and How Was It Overcome
 
