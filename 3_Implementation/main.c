@@ -43,6 +43,8 @@ int main(){
     }
 
     printf("\nThe Performance of the strategies on historical data is just a probable indication but final decision of Trade is subject to personal discretion!!");
-   
+    
+    fclose(file);
+    free(filePath);
     return 0;
 }
