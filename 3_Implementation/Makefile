@@ -29,7 +29,7 @@ endif
 MAIN_NAME = main.c
 
 # All source code files
-SRC = src/readColoumn.c\
+SRC = src/readColumn.c\
 src/readDate.c\
 src/sma.c\
 src/smaCrossover.c\
