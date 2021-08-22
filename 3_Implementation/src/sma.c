@@ -11,5 +11,5 @@ float sma(int days, int crtday, float *columnArray)// days: avg of last n days, 
     else{
         return -1;
     }
-    return ((days-sum)/days); //returning Simple moving average
+    return ((sum)/days); //returning Simple moving average
 }
