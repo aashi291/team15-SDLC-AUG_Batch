@@ -40,7 +40,7 @@ src/bollingerStrategy.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
-unity/unity.c\
+unity/unity.c
 
 # All include folders with header files
 INC = -Iinc\
