@@ -64,7 +64,7 @@ test: $(SRC) $(TEST_SRC) $(BUILD)
 	$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 
 coverage:${PROJECT_NAME} $(BUILD)
-	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC)) -lm
 	$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 	$(MOVE) *.gcno src
 	$(MOVE) *.gcda src
