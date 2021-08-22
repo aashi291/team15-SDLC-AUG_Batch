@@ -18,11 +18,14 @@ void smaStrategy(char *filePath){
     {
         printf("\nEnter two different number of days for simple moving average :");
         scanf("%d%d",&sm1,&sm2);
+<<<<<<< Updated upstream
         while(sm1>sm2)
         {
             printf("\nEnter the lower number of days first and then the higher number of days: ");
             scanf("%d%d",&sm1,&sm2);
         }
+=======
+>>>>>>> Stashed changes
     }
 
     FILE *file = fopen(filePath,"r");
