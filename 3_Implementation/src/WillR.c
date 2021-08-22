@@ -20,7 +20,7 @@ char *filePath = "LTTS.csv";
 #include "WillR.h"
 
 
-void main()
+void WilliamR()
 {
  FILE *file = fopen(filePath,"r");
     float *close = readColumn(file,7);
