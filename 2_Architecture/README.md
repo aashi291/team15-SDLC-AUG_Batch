@@ -37,5 +37,7 @@
 ### Triangular Moving Average 
 ![Low level Behavioural Diagram for TMA](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/TMA.png?raw=true)
 
+### Money Flow Index 
+![Low level Behavioural Diagram for MFI](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/MFI%20Low%20Level.jpeg)
 
 
