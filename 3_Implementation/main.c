@@ -28,14 +28,14 @@ int main(){
     
 
     int strategyChoice; // this selects a particular strategy from a given list to be processed
-    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n 6. Weighted Moving Average \n7.MACD \n\nEnter your choice: "); // update your strategy in the menu
+    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n 6. Weighted Moving Average \n7.MACD \n8.rsi\nEnter your choice: "); // update your strategy in the menu
     scanf("%d",&strategyChoice);
     if(strategyChoice == 0)
         {
           printf("Wrong input");
           return 0;
         }
-    while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3 && strategyChoice!=4 && strategyChoice!=5 && strategyChoice!=6 && strategyChoice!=7) // update your respective strategy choice here as well
+    while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3 && strategyChoice!=4 && strategyChoice!=5 && strategyChoice!=6 && strategyChoice!=7 && strategyChoice!=8) // update your respective strategy choice here as well
     {
         printf("\nInvalid choice!\nPlease Enter a valid choice from the above given options only : ");
         scanf("%d",&strategyChoice);
@@ -52,10 +52,12 @@ int main(){
                 break;
         case 5: emaStrategy(filePath);
                 break;
-        case 6: wmaStrategy(filePath); 
-                break; 
+        //case 6: wmaStrategy(filePath); 
+               // break;
         case 7: macdStrategy(filePath);
-                break;    
+                break;   
+        case 8: rsiStrategy(filePath);
+                break;
     
     }
 

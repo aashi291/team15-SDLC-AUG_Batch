@@ -28,7 +28,7 @@ char *filePath = "LTTS.csv";
 #include "WillR.h"
 
 
-int main()
+int WilliamR()
 {
     int choice, will , dm;
        printf("\nTwo different number of days are required for Williama%%R calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");

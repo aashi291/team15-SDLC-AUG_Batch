@@ -99,7 +99,7 @@ void mfi(char * filePathMFI);
 
 float ema(int days, int crtday, float *columnArray);
 
-void emaStrategy(char *filePath);
+_Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray);
 
 float macd(int fastLength, int slowLength, int crtday, float *columnArray);
 
@@ -111,6 +111,21 @@ _Bool histogramCondition(int fastLength, int slowLength, int signalLength, int c
 
 void macdStrategy(char *filePath);
 
-_Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray);
+float rsi(int days, int crtday, float *high, float *low);
+
+/**
+ * @brief tells if the 14 days rsi(relative strength index) is overbought or oversold 
+ * 
+ * @return _Bool
+ */
+_Bool rsiCrossover( int rs1, int crtday, float *high ,float *low);
+
+/**
+ * @brief The function executes the rsi Strategy by considering the user choices 
+ * 
+ * @param file 
+ */
+void rsiStrategy(char *filePath);
+
 
 #endif
