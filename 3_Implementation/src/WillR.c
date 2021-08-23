@@ -16,13 +16,26 @@ char *filePath = "LTTS.csv";
     float WillR;
     int will = 14;
 
-
+/**
+ * @file WillR.c
+ * @author Alna Satheesh (alna.satheesh@ltts.com.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-08-23
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include "WillR.h"
 
 
-void WilliamR()
+int main()
 {
  FILE *file = fopen(filePath,"r");
+    if(file == NULL){
+            perror("Unable to open the file.");
+            return -1;
+        }
     float *close = readColumn(file,7);
     int length = findLength();
     /*
@@ -39,9 +52,9 @@ void WilliamR()
     profitblprcnt = percentage of profitable trades out of total trades
     */
     float totalP = 0, totalL = 0, profitFactor = 0, profitbl = 0, profitblprcnt = 0;
-
+    fclose(file);
     _Bool intrade = false;
-    //printf("Trade\tStatus\t\tDate\t\t\tPrice\t\tP/L\n\n");
+   // printf("Trade\tStatus\t\tDate\t\t\tPrice\t\tP/L\n\n");
     for (int today=(length-dm); today>0; today--)
     {
         DMA100 = findDMA(dm , today , close,length);
@@ -59,6 +72,8 @@ void WilliamR()
             char *date = readDate(filePath,today+1);
             sellp=close[today];
 
+        free(close);
+        free(date);
             pl = sellp-buyp;
             totalpl += pl;
 
@@ -76,38 +91,44 @@ void WilliamR()
     profitFactor = totalP/totalL;
     profitblprcnt = (profitbl/(tradeNo-2))*100;
     //printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo-2), profitblprcnt, totalpl, profitFactor);
-
+    return 0;
 }
+
 
 
 int findWillR(int dm,float *close,int today, int will,int length)
 {
     
-    float highestHigh, lowestLow ; 
-    FILE *fileptr = fopen(filePath,"r");
-    float *high = readColumn(fileptr,4);
-    float *low = readColumn(fileptr,5);
-     //float sum = 0; // sum of all days price
+    float highestHigh, lowestLow ; //To store the highest of high for last (14) days and lowest of low for last (14) days
+    FILE *fileptr = fopen(filePath,"r"); //open .csv file to read
+    if(fileptr == NULL){                //check if file has opened
+            perror("Unable to open the file.");
+            return 0;
+        }
+    float *high = readColumn(fileptr,4);    //store the data about column high to an array called high
+    float *low = readColumn(fileptr,5);     //store the data about column low to an array called low
     if(today<=(length-dm)){
        // printf("\nwillr");
         highestHigh=high[today];
-       // printf("hightoday %f " , high[today]);
+       printf("hightoday %f " , high[today]);
         lowestLow=low[today];
-        //printf("lowtoday %f " , low[today]);
+        printf("lowtoday %f " , low[today]);
         for (int i = today; i<(today+will); i++){
             if(high[i]>highestHigh)
                 highestHigh=high[i];
             if(low[i]<lowestLow)
                 lowestLow=low[i];
         }
+        free(high);
+        free(low);
    // printf("highest %f " ,highestHigh);
    // printf("lowest %f " ,lowestLow);
   //  printf("close %f\n " ,close);
     fclose(fileptr);
 
-WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow));
-//printf("\nwilliam\%R %f" , WillR);
-return WillR;
+WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow)); //formula for williams%r
+printf("\nwilliam%%R %f" , WillR);
+return WillR;       //return value to be checked for buy or sell
     } 
 }
 
@@ -132,21 +153,20 @@ float findDMA(int dm , int today , float *close,int length)
 bool buyCondition(int DMA100, int WillR, float *close, int i)
 {
 
-    if(WillR>50 && close[i]>DMA100)
+    if(WillR>.5 && close[i]>DMA100)  //conditon to buy 
     return true;
-    if(WillR<50 || close[i]<DMA100)
+    if(WillR<.5 || close[i]<DMA100) //condition to sell
     return false;
 }
 
 int findLength()
 {
-    FILE *fp;
     int count = 0;  // Line counter (result)
     
     char c;  // To store a character read from file
   
     // Open the file
-    fp = fopen(filePath, "r");
+    FILE *fp = fopen(filePath, "r");
   
     // Check if file exists
     if (fp == NULL)
@@ -160,8 +180,8 @@ int findLength()
         if (c == '\n') // Increment count if this character is newline
             count = count + 1;
   
-    // Close the file
-    fclose(fp);
+    
+    fclose(fp);     // Close the file
   
   
     return count-1;
