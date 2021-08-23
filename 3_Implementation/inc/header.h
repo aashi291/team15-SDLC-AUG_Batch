@@ -98,5 +98,7 @@ void boilingerStrategy(char * filePath);
 void mfi(char * filePathMFI);
 
 float ema(int days, int crtday, float *columnArray);
+void emaStrategy(char *filePath);
+_Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray);
 
 #endif

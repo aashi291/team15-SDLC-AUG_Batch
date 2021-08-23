@@ -28,14 +28,14 @@ int main(){
     
 
     int strategyChoice; // this selects a particular strategy from a given list to be processed
-    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n\nEnter your choice: "); // update your strategy in the menu
+    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n\nEnter your choice: "); // update your strategy in the menu
     scanf("%d",&strategyChoice);
     if(strategyChoice == 0)
         {
           printf("Wrong input");
           return 0;
         }
-    while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3) // update your respective strategy choice here as well
+    while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3 && strategyChoice!=4 && strategyChoice!=5) // update your respective strategy choice here as well
     {
         printf("\nInvalid choice!\nPlease Enter a valid choice from the above given options only : ");
         scanf("%d",&strategyChoice);
@@ -49,6 +49,8 @@ int main(){
         case 3: Stochastic_Strategy(filePath);
                 break;
         case 4:  mfi(filePath);
+                break;
+        case 5: emaStrategy(filePath);
                 break;
     
     }

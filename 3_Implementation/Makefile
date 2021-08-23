@@ -39,7 +39,9 @@ src/mfi.c\
 src/WillR.c\
 src/Stochastic.c\
 src/Stochastic_crossover.c\
-src/Stochastic_Strategy.c
+src/Stochastic_Strategy.c\
+src/ema.c\
+src/emaStrategy.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
