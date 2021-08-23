@@ -11,8 +11,8 @@
 |   `ID3`   |   Indicator used in William%R strategy                    | DMA(100,close)                                                        | 2718.1775  |   | Scenario based |
 |   `ID4`   |   Indicator used in macd Strategy                         | macd(12,26,10,close)                                                  | 70.93      |   | Scenario based |
 |   `ID5`   |   Indicator used in rsi Strategy                          | rsi(14,10,high,low)                                                   | 50.7496    |   | Scenario based |
-|   `ID6`   |   Indicator used for Bollinger Bands Strategy             | upperBand(2,20,362,close)                                             | 1773.41702 |   | Scenario based |
-|   `ID7`   |   Indicator used for Bollinger Bands Strategy             | lowerBand(2,20,362,close)                                             | 1452.46298 |   | Scenario based |
+|   `ID6`   |   Indicator used for Bollinger Bands Strategy             | upperBand(2,20,361,close)                                             | 1774.471   |   | Scenario based |
+|   `ID7`   |   Indicator used for Bollinger Bands Strategy             | lowerBand(2,20,361,close)                                             | 1469.00298 |   | Scenario based |
 |   `ID8`   |   Indicator used for Triangular Moving Average Strategy   | TMA-Triangular Moving Average(26,10,close)                            | 2798       |   | Scenario based |
 |   `ID9`   |   Indicator used in ROC strategy                          | roc(20,10,close)                                                      | 6.4407     |   | Scenario based |
 |   `ID10`  |   MFI Indicator                                           | mfi(ArrayName)                                                        | 78.1977    |   | Scenario based |
