@@ -22,8 +22,13 @@
 ### Williams %R
 ![Low Level Behavioural Diagram for WillR](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/WillR_B.png)
 
+
+
 ### Relative Strength Index
-![Low Level Behavioural Diagram for RSI](![RELATIVE STRENGTH INDEX](https://user-images.githubusercontent.com/86605697/130452536-62e0c321-c62f-481e-aca8-c2d96286a0af.png)
+![Low Level Behavioural Diagram for RSI](![RELATIVE STRENGTH INDEX]![RELATIVE STRENGTH INDEX](https://user-images.githubusercontent.com/86605697/130456988-2e2d6bb9-ffe1-4baa-adb2-fd6816f3fded.png)
+
+
+
 
 
 ### Stochastic Indicator
