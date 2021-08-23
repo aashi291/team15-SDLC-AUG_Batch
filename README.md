@@ -2,7 +2,7 @@
 
 |Build | Code Quality | Code Inspector and Codacy| Unity | Git Inspector | Code Coverage |
 |:----:|:----:|:----:|:----:|:----:|:----:|
-
+| [![Linux C/C++ CI](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/Linux_c.yml/badge.svg)](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/Linux_c.yml) <br> [![Windows C/C++ CI](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/Windows_c.yml/badge.svg)](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/Windows_c.yml) | [![Code Quality - Static Code - Cppcheck](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/cppcheck.yml) <br> [![Valgrind](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/Valgrind.yml/badge.svg)](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/Valgrind.yml) | | [![Unit testing](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/UnitTesting.yml/badge.svg)](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/UnitTesting.yml) | [![Contribution Check - Git Inspector](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/gitInspector.yml/badge.svg)](https://github.com/rajivadak/team15-SDLC-AUG_Batch/actions/workflows/gitInspector.yml)
 
 ## Folder Structure
 Folder                | Description
