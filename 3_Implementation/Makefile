@@ -32,7 +32,6 @@ MAIN_NAME = main.c
 SRC = src/readColumn.c\
 src/readDate.c\
 src/sma.c\
-src/smaCrossover.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
 src/bollingerCrossover.c\
