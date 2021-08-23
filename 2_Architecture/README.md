@@ -1,7 +1,7 @@
 # Architecture
 
 
-## High Level Behavioural Diagram
+## High Level Behavioral Diagram
 ![activity diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/888d066dc76ad7c78cc4f33b09749bc6894b95c4/2_Architecture/Activity%20diagram.jpeg)
 
 ## High Level Structural Diagram

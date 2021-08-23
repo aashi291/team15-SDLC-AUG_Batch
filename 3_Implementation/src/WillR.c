@@ -65,14 +65,14 @@ int main()
 
         //printf("close %f" , close[i]);
         
-    float *coloumn2 = readColumn(file,7);
+    float *coloumn2 = readColumn(file,3);
         high = malloc(length*sizeof(float));
         memcpy(high,coloumn2,length*sizeof(float));
 
         //for(int i=0; i<length;i++)
         //printf("high %f" , high[i]);
         
-        float *coloumn3 = readColumn(file,7);
+        float *coloumn3 = readColumn(file,4);
         low = malloc(length*sizeof(float));
         memcpy(low,coloumn3,length*sizeof(float));
         /*
@@ -107,7 +107,7 @@ int main()
             char *date = readDate(filePath,today+1);
             buyp=close[today];
 
-            printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
+           //printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
             tradeNo++;
             intrade = true;
         }
@@ -123,7 +123,7 @@ int main()
             totalL += abs((pl<0)?pl:0);
             profitbl += ((pl>0)?1:0);
             
-            printf("\tSELL\t\t%s\t\t%0.2f\t\t%0.2f\n\n", date, sellp, pl);
+            //printf("\tSELL\t\t%s\t\t%0.2f\t\t%0.2f\n\n", date, sellp, pl);
             
             intrade = false;
           
@@ -143,7 +143,7 @@ int main()
 
 
 
-float findWillR(int dm,int will,int length ,int today, float *close, float *high , float *low)
+float findWillR(int dm, int will,int length ,int today, float *close, float *high , float *low)
 {
     
     float highestHigh, lowestLow ; //To store the highest of high for last (14) days and lowest of low for last (14) days
@@ -159,7 +159,7 @@ float findWillR(int dm,int will,int length ,int today, float *close, float *high
      }
     }
         WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow)); //formula for williams%r
-    //printf("\nwilliam%%R %f" , WillR*100); 
+    printf("\nwilliam%%R %f " , WillR*100); 
     return WillR*100;       //return value to be checked for buy or sell
 
 }
@@ -170,14 +170,14 @@ float findDMA(int dm , int today , float *close,int length)
      float sum = 0; // sum of all days price
     if(today<=(length-dm)){
        // printf("\ndma entered");
-        for (int i = today; i<(today+dm); i++){
+        for (int i = today-5; i<(today+dm+5); i++){
             sum += close[i];
         }
     }
     else{
         return -1;
     }
-    //printf("%f Dma" , sum/dm);
+    printf(" DMA %f " , sum/dm);
     return (sum/dm); //returning Simple moving average
     
 }
@@ -185,9 +185,9 @@ float findDMA(int dm , int today , float *close,int length)
 bool buyCondition(int DMA100, int WillR, float *close, int i)
 {
 
-    if(WillR<.5 && close[i]>DMA100)  //conditon to buy 
+    if(WillR< 0.5 && close[i]>DMA100)  //conditon to buy 
     return true;
-    if(WillR>.5 || close[i]<DMA100) //condition to sell
+    if(WillR> 0.5|| close[i]<DMA100) //condition to sell
     return false;
 return NULL;
 }
@@ -220,16 +220,3 @@ int findLength()
     return count-1;
 }
 
-
-
-float lowLow(int will,int today)
-{
-    float lowest;
-    FILE *fileptr1 = fopen("LTTS.csv","r");
-    float *low=readColumn(fileptr1,4);
-    for (int i = today; i<(today+will); i++)
-            if(low[i]<lowest)
-                lowest=low[i];
-
-    return lowest;
-}
