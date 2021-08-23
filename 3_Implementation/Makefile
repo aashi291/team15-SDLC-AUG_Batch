@@ -32,10 +32,8 @@ MAIN_NAME = main.c
 SRC = src/readColumn.c\
 src/readDate.c\
 src/sma.c\
-src/smaCrossover.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
-src/bollingerCrossover.c\
 src/bollingerStrategy.c\
 src/mfi.c
 
@@ -92,7 +90,7 @@ valgrind_main: all
 	valgrind $(call FixPath,$(BUILD)/$(PROJT_NAME).$(EXEC))
 
 valgrind_test: $(SRC) $(TEST_SRC) $(BUILD)
-	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC)) -lm
 	valgrind ./$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 
 
