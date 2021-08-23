@@ -16,7 +16,7 @@
 
 ![Low Level Behavioral Diagram for ROC](https://user-images.githubusercontent.com/86352920/130366669-53684615-5fb4-457b-bcdc-d38f8c6d2f39.jpeg)
 
-
+![Low level Behavioural Diagram for MACD](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/badd9a7456b47ccec33f351f4fc3097523c8fc76/2_Architecture/MACD.jpeg)
 
 ### High Level Diagram
 
