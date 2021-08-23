@@ -19,7 +19,7 @@ float macdSignal(int fastLength, int slowLength, int signalLength, int crtday, f
     int multiplier = 2/(signalLength+1);
 
     if(crtday<=(columnArray[0]-slowLength)){
-            macdS = (macd(fastLength, slowLength, crtday, columnArray))*multiplier + sma(signalLength, crtday+1, columnArray )*(1-multiplier);;
+            macdS = (macd(fastLength, slowLength, crtday, columnArray))*multiplier + sma(signalLength, crtday+1, columnArray )*(1-multiplier);
     }
     else{
         return -1;

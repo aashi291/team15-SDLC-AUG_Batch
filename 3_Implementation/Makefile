@@ -41,9 +41,11 @@ src/Stochastic.c\
 src/Stochastic_crossover.c\
 src/Stochastic_Strategy.c\
 src/ema.c\
-src/emaStrategy.c
+src/emaStrategy.c\
 src/wma.C\
 src/wmaStrategy.c\
+src/macd.c\
+src/macdStrategy.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
