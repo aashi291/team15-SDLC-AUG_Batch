@@ -29,8 +29,22 @@ char *filePath = "LTTS.csv";
 #include "WillR.h"
 
 
-int main()
+int WilliamR()
 {
+    int choice;
+       printf("\nTwo different number of days are required for Williama%%R calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");
+    scanf("%d",&choice);
+    while (choice!=1 && choice!=2)
+    {
+        printf("\nPlease Enter a valid choice from the given list of options :");
+        scanf("%d",&choice);
+    }
+    if(choice==2)
+    {
+        printf("\nEnter two different number of days for simple moving average :");
+        scanf("%d%d",&dm,&will);
+    }
+
  FILE *file = fopen(filePath,"r");
     if(file == NULL){
             perror("Unable to open the file.");
@@ -38,6 +52,7 @@ int main()
         }
     float *close = readColumn(file,7);
     int length = findLength();
+    
     /*
     tradeNo = number of trades, buyp = buying price, sellp = selling price,
     pl = profit or loss in that trade, totalpl = total profit or loss at the end
@@ -55,8 +70,9 @@ int main()
     fclose(file);
     _Bool intrade = false;
    // printf("Trade\tStatus\t\tDate\t\t\tPrice\t\tP/L\n\n");
-    for (int today=(length-dm); today>0; today--)
+    for (int today=(close[0]-dm); today>0; today--)
     {
+        printf("\n%f close", close[today]);
         DMA100 = findDMA(dm , today , close,length);
         WillR = findWillR(dm, close, today , will,length);
 
@@ -96,7 +112,7 @@ int main()
 
 
 
-int findWillR(int dm,float *close,int today, int will,int length)
+float findWillR(int dm,float *close,int today, int will,int length)
 {
     
     float highestHigh, lowestLow ; //To store the highest of high for last (14) days and lowest of low for last (14) days
@@ -110,7 +126,7 @@ int findWillR(int dm,float *close,int today, int will,int length)
     if(today<=(length-dm)){
        // printf("\nwillr");
         highestHigh=high[today];
-       printf("hightoday %f " , high[today]);
+      printf("hightoday %f " , high[today]);
         lowestLow=low[today];
         printf("lowtoday %f " , low[today]);
         for (int i = today; i<(today+will); i++){
@@ -127,7 +143,7 @@ int findWillR(int dm,float *close,int today, int will,int length)
     fclose(fileptr);
 
 WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow)); //formula for williams%r
-printf("\nwilliam%%R %f" , WillR);
+//printf("\nwilliam%%R %f" , WillR);
 return WillR;       //return value to be checked for buy or sell
     } 
 }
