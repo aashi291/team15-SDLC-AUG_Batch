@@ -95,4 +95,6 @@ _Bool bollingerBandIndicator(int mulFactor,int noOfDaysMA,int presentDay,float* 
  */
 void boilingerStrategy(char * filePath);
 
+void mfi(char * filePath);
+
 #endif
