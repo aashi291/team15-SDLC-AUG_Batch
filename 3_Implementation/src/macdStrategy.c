@@ -1,13 +1,14 @@
 #include <header.h>
 #include <unistd.h>
 
-void smaStrategy(char *filePath){
+void macdStrategy(char *filePath){
 
     int choice;
-    int sm1 = 14; //put the inputs u want for your indicator
-    int sm2 = 28; //put the inputs u want for your indicator
+    int fastLength = 12; 
+    int slowLength = 26;
+    int signalLength = 9;
 
-    printf("\nTwo different number of days are required for simple moving average calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");
+    printf("\nThree different number of days are required for MACD calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");
     scanf("%d",&choice);
     while (choice!=1 && choice!=2)
     {
@@ -17,13 +18,8 @@ void smaStrategy(char *filePath){
     if(choice==2)
     {
         printf("\nEnter two different number of days for simple moving average :");
-        scanf("%d%d",&sm1,&sm2);
+        scanf("%d %d %d",&fastLength,&slowLength,&signalLength);
 
-        while(sm1>sm2)
-        {
-            printf("\nEnter the lower number of days first and then the higher number of days: ");
-            scanf("%d%d",&sm1,&sm2);
-        }
     }
 
     FILE *file = fopen(filePath,"r");
@@ -45,10 +41,10 @@ void smaStrategy(char *filePath){
 
     _Bool intrade = false;
     printf("Trade\tStatus\t\tDate\t\t\tPrice\t\tP/L\n\n");
-    for (int i=(close[0]-sm2); i>0; i--)
+    for (int i=(close[0]-slowLength); i>0; i--)
     {
 
-        if (smaCrossover(sm1, sm2, i, close) && !intrade ){
+        if (histogramCondition(fastLength, slowLength, signalLength, i, close) && !intrade ){
             char *date = readDate(filePath,i+1);
             buyp=close[i];
 
@@ -57,7 +53,7 @@ void smaStrategy(char *filePath){
 
             intrade = true;
         }
-        else if (!smaCrossover(sm1, sm2, i, close) && intrade){
+        else if (!histogramCondition(fastLength, slowLength, signalLength, i, close) && intrade){
             char *date = readDate(filePath,i+1);
             sellp=close[i];
 
@@ -83,13 +79,13 @@ void smaStrategy(char *filePath){
 }
 
 //takes the coloumn from where sma is to be calculated and the prices
-//check crossover of 14 sm1 and 28 sm2
+//check crossover of 14 fastLength and 28 slowLength
 //returns true if 14 sma is above 28 sma and return false if vise-versa
-_Bool smaCrossover( int sm1, int sm2, int crtday, float *coloumnArray){
-    if ((sma(sm1,(crtday), coloumnArray)>sma(sm2,(crtday), coloumnArray))){        
+_Bool histogramCondition(int fastLength, int slowLength, int signalLength, int crtday, float *columnArray){
+    if (macdHistogram(fastLength, slowLength, signalLength, crtday, columnArray)>0){        
         return true;
     }
-    else if ((sma(sm1,(crtday), coloumnArray)<sma(sm2,(crtday), coloumnArray))){
+    else if (macdHistogram(fastLength, slowLength, signalLength, crtday, columnArray)<0){
         return false;
     }
 }
