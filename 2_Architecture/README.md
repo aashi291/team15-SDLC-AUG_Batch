@@ -18,6 +18,8 @@
 
 ![Low level Behavioural Diagram for MACD](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/badd9a7456b47ccec33f351f4fc3097523c8fc76/2_Architecture/MACD.jpeg)
 
+![Low level Behavioural Diagram for TMA](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/TMA.png?raw=true)
+
 ### High Level Diagram
 
 ![High level Behavioural Diagram](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/Behavioural%20Diagram.png)
