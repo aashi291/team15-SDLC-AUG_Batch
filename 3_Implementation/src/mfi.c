@@ -54,7 +54,7 @@
           //printf("%f\n",mfi[i]);
         if(mfi[i]<75.00)
         {
-            char *date = readDate(filePath,i);//storing the date 
+            char *date = readDate(filePathMFI,i);//storing the date 
             printf("\t%s\t\n", date);// displaying the date
         }
 
