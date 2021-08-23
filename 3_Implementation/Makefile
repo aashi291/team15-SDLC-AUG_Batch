@@ -8,7 +8,7 @@ TEST_PROJT_NAME = Test_$(PROJT_NAME)
 # Output directory
 BUILD = build
 
-CC = gcc
+CC = gcc    
 
 #To check if the OS is Windows or Linux and set the executable file extension and delete command accordingly
 ifdef OS
@@ -32,6 +32,7 @@ MAIN_NAME = main.c
 SRC = src/readColumn.c\
 src/readDate.c\
 src/sma.c\
+src/smaCrossover.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
 src/bollingerCrossover.c\
@@ -91,7 +92,7 @@ valgrind_main: all
 	valgrind $(call FixPath,$(BUILD)/$(PROJT_NAME).$(EXEC))
 
 valgrind_test: $(SRC) $(TEST_SRC) $(BUILD)
-	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC)) -lm
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 	valgrind ./$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 
 
