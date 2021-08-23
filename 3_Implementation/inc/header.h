@@ -127,10 +127,5 @@ _Bool rsiCrossover( int rs1, int crtday, float *high ,float *low);
  */
 void rsiStrategy(char *filePath);
 
-/**
- * @brief This function calculates the relative strength index for the given array  
- * 
- * @return float 
-
 
 #endif
