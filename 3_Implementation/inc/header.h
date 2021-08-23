@@ -97,4 +97,6 @@ void boilingerStrategy(char * filePath);
 
 void mfi(char * filePathMFI);
 
+float ema(int days, int crtday, float *columnArray);
+
 #endif
