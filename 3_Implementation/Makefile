@@ -45,7 +45,9 @@ src/emaStrategy.c\
 src/wma.C\
 src/wmaStrategy.c\
 src/macd.c\
-src/macdStrategy.c
+src/macdStrategy.c\
+src/rsi.c\
+src/rsiStrategy.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
