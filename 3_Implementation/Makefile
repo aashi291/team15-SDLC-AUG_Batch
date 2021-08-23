@@ -32,15 +32,16 @@ MAIN_NAME = main.c
 SRC = src/readColumn.c\
 src/readDate.c\
 src/sma.c\
+src/smaCrossover.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
 src/bollingerCrossover.c\
 src/bollingerStrategy.c\
-src/WillR.c
+src/mfi.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
-unity/unity.c
+unity/unity.c\
 
 # All include folders with header files
 INC = -Iinc\
@@ -65,7 +66,7 @@ test: $(SRC) $(TEST_SRC) $(BUILD)
 	$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 
 coverage:${PROJECT_NAME} $(BUILD)
-	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC)) -lm
+	gcc -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 	$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 	$(MOVE) *.gcno src
 	$(MOVE) *.gcda src
@@ -91,7 +92,7 @@ valgrind_main: all
 	valgrind $(call FixPath,$(BUILD)/$(PROJT_NAME).$(EXEC))
 
 valgrind_test: $(SRC) $(TEST_SRC) $(BUILD)
-	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC)) -lm
+	gcc $(SRC) $(TEST_SRC) $(INC) -o $(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 	valgrind ./$(call FixPath,$(BUILD)/$(TEST_PROJT_NAME).$(EXEC))
 
 
