@@ -16,7 +16,7 @@ void rsiStrategy(char *filePath){
     if(choice==2)
     {
         printf("\nEnter two different number of days for relative strength index :");
-        scanf("%d%d",&rs1);
+        scanf("%d",&rs1);
 
     }
 
