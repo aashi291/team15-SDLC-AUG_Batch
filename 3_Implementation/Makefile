@@ -34,7 +34,6 @@ src/readDate.c\
 src/sma.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
-src/bollingerCrossover.c\
 src/bollingerStrategy.c\
 src/mfi.c
 
