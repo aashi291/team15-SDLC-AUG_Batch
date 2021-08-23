@@ -55,7 +55,7 @@ The utility can be used by giving .csv file of any stock which can be easily dow
 | LR_03  | Implement Rate of Change strategy                        |  HR_02  | Implemented  |
 | LR_04  | Implement Williams %R strategy                           |  HR_02  | Implemented  |
 | LR_05  | Implement Weighted Moving Average strategy               |  HR_02  | Implemented  |
-| LR_06  | Implement Hull Moving Average strategy                   |  HR_02  | Implemented  |
+| LR_06  | Implement Triangular Moving Average strategy             |  HR_02  | Implemented  |
 | LR_07  | Implement Relative Strength Index strategy               |  HR_02  | Implemented  |
 | LR_08  | Implement Money Flow Index strategy                      |  HR_02  | Implemented  |
 | LR_09  | Implement Exponential Moving Average strategy            |  HR_02  | Implemented  |
