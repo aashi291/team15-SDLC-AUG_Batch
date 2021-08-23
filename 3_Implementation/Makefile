@@ -35,7 +35,11 @@ src/sma.c\
 src/smaStrategy.c\
 src/bollingerBands.c\
 src/bollingerStrategy.c\
-src/mfi.c
+src/mfi.c\
+src/WillR.c\
+src/Stochastic.c\
+src/Stochastic_crossover.c\
+src/Stochastic_Strategy.c
 
 # All test source files
 TEST_SRC = test/testMain.c\
