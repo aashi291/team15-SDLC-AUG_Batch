@@ -36,12 +36,14 @@ float findDMA(int , int , float *, int);
  * 
  * @return int 
  */
-float findWillR(int ,float *,int , int , int);
+float findWillR(int,int ,int, int, float* ,float *, float *);
 /**
  * @brief used to find the length of the .csv file so that navigation from the furthest date is possible
  * 
  * @return int 
  */
-int findLength();
+int findLength();   //to find the number of rows in file
+float highHigh(int ,int);
+float lowLow(int,int );
 
 #endif
