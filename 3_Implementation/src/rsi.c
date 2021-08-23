@@ -4,7 +4,7 @@ float rsi(int days, int crtday, float *HIGH,float *LOW)// days: avg of last n da
 {
     float total = 0; // formula
     if(crtday<=(HIGH[0]-days)){
-     total= [100 – [100 / ( 1 + sma(days,crtday,HIGH) / sma(days,crtday,LOW) ) ) ]]
+     total= (100 – (100 / ( 1 + sma(days,crtday,HIGH) / sma(days,crtday,LOW) ) )))
     }
     return (total); //returning relative strength index
 }
