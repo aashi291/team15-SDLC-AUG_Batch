@@ -42,8 +42,6 @@ src/Stochastic_crossover.c\
 src/Stochastic_Strategy.c\
 src/ema.c\
 src/emaStrategy.c\
-src/wma.c\
-src/wmaStrategy.c\
 src/macd.c\
 src/macdStrategy.c\
 src/rsi.c\

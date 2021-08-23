@@ -53,7 +53,7 @@ int main(){
         case 5: emaStrategy(filePath);
                 break;
         case 6: wmaStrategy(filePath); 
-                break; 
+                break;
         case 7: macdStrategy(filePath);
                 break;   
         case 8: rsiStrategy(filePath);
