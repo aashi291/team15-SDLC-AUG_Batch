@@ -22,8 +22,9 @@ void rsiStrategy(char *filePath){
 
     FILE *file = fopen(filePath,"r");
     float *close = readColumn(file,7);
-    float *high = readColumn(file,3); // Accessing HIGH column from .csv file
-    float *low = readColumn(file,4); // Accessing LOW column from .csv file
+    float *HIGH = readColumn(file_ptr,3); // Accessing HIGH column from .csv file
+    float *LOW = readColumn(file_ptr,4); // Accessing LOW column from .csv file
+
     /*
     tradeNo = number of trades, buyp = buying price, sellp = selling price,
     pl = profit or loss in that trade, totalpl = total profit or loss at the end
@@ -44,7 +45,7 @@ void rsiStrategy(char *filePath){
     for (int i=(close[0]-rs1); i>0; i--)
     {
 
-        if (rsiCrossover(rs1, i, high,low) && !intrade ){
+        if (rsiCrossover(rs1, i, HIGH, LOW) && !intrade ){
             char *date = readDate(filePath,i+1);
             buyp=close[i];
 
@@ -53,7 +54,7 @@ void rsiStrategy(char *filePath){
 
             intrade = true;
         }
-        else if (!rsiCrossover(rs1, i, high, low) && intrade){
+        else if (!rsiCrossover(rs1, i, HIGH, LOW) && intrade){
             char *date = readDate(filePath,i+1);
             sellp=close[i];
 
@@ -80,11 +81,11 @@ void rsiStrategy(char *filePath){
 //takes the coloumn from where rsi is to be calculated and the prices
 //check crossover of 14 rs1 and external input
 //returns true if rsi<30 which is oversell and return false if rsi>70 which is overbought 
-_Bool rsiCrossover( int rs1, int crtday, float *high, float *low){
-    if ((rsi(rs1,(crtday),high, low )>70)){        
+_Bool rsiCrossover( int rs1, int crtday, float *HIGH, float *LOW){
+    if ((rsi(rs1,(crtday), HIGH, LOW )>70)){        
         return false;
     }
-    else if ((rsi(rs1,(crtday),high,low )<30)){
+    else if ((rsi(rs1,(crtday), HIGH, LOW )<30)){
         return true;
     }
 }
