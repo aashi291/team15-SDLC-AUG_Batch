@@ -21,7 +21,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005772 | SHREYASI  CHAUDHURI    | Rate Of Change
  99005839 | Alna Satheesh          | Williams %R
  99005797 | Ramya  Desai           | Weighted Moving Average
- 99005769 | RAJIV  ADAK            | hull moving average
+ 99005769 | RAJIV  ADAK            | Triangular Moving Average
  99005807 | AASHI  LAHORI          | Relative Strength Index
  99005834 | Sourav  Sudarshan      | Money Flow Index Indicator
  99005762 | Kunal Kishore Mozarkar | Exponential Moving Average
