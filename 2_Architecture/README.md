@@ -23,9 +23,9 @@
 ![Low Level Behavioural Diagram for WillR](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/WillR_B.png)
 
 
-
 ### Relative Strength Index
-![Low Level Behavioural Diagram for RSI](![RELATIVE STRENGTH INDEX]![RELATIVE STRENGTH INDEX](https://user-images.githubusercontent.com/86605697/130456988-2e2d6bb9-ffe1-4baa-adb2-fd6816f3fded.png)
+![rsi (2)](https://user-images.githubusercontent.com/86605697/130458802-9816c612-dea3-40b4-bd3b-ab424c73e4f7.png)
+
 
 
 
