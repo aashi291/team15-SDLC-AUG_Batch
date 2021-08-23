@@ -1,9 +1,9 @@
 #include "header.h"
  
- void mfi(char * filePath)
+ void mfi(char * filePathMFI)
  {
      int i;
-     FILE *file_pointer = fopen(filePath,"r"); // This is to open the .csv file path and assign it to pointer for the further processing
+     FILE *file_pointer = fopen(filePathMFI,"r"); // This is to open the .csv file path and assign it to pointer for the further processing
 
     float *closePriceValues = readColumn(file_pointer,3); // Here is 3 is the close price column in the .csv file which is required for 
     //float *highPrice = readColumn(file_pointer,3);
