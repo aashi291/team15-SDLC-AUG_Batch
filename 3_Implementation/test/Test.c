@@ -8,6 +8,7 @@ void setUp(){}
 void tearDown(){}
 void testSma(void);
 void testBollingerBands(void);
+void testMFI(void);
 //array to test sma and crossover functions
 float *close;
 //array to test sma and crossover functions
@@ -20,6 +21,7 @@ int main(){
     UNITY_BEGIN();
     RUN_TEST(testSma);
     RUN_TEST(testBollingerBands);
+    RUN_TEST(testMFI);
     return UNITY_END();
 }
 
@@ -38,4 +40,14 @@ void testBollingerBands(void)
     TEST_ASSERT_EQUAL(1,lowerBand(2,20,365,close));
     TEST_ASSERT_EQUAL(-1,movingMiddleBand(20,365,close));
     TEST_ASSERT_EQUAL(-1,stdDev(20,365,close));
+}
+
+void testMFI(void)
+{
+    TEST_ASSERT_EQUAL(78, mfiCalculator(3.586692897));
+    TEST_ASSERT_EQUAL(78, mfiCalculator(3.639461998));
+    TEST_ASSERT_EQUAL(64, mfiCalculator(1.797571971));
+    TEST_ASSERT_EQUAL(10, mfiCalculator(0.114763051));
+    TEST_ASSERT_EQUAL(86, mfiCalculator(6.174203173));
+    TEST_ASSERT_EQUAL(15, mfiCalculator(0.180448517));
 }
