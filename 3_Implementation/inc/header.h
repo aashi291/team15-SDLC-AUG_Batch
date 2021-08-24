@@ -101,6 +101,8 @@ float ema(int days, int crtday, float *columnArray);
 
 _Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray);
 
+void emaStrategy(char *filePath);
+
 float macd(int fastLength, int slowLength, int crtday, float *columnArray);
 
 _Bool macdCondition(int fastLength, int slowLength, int crtday, float *columnArray);
