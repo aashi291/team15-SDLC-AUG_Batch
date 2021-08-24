@@ -19,7 +19,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
 ----------|------------------------|----------------|----------------|---------------|-------------|--------------
  99005763 | Abhay  Sahu            | Moving Average Convergence Divergence 
  99005772 | Shreyashi  Chaudhari   | Rate Of Change
- 99005839 | Alna Satheesh          | Williams %R        | 2    |2    |2    |2
+ 99005839 | Alna Satheesh          | Williams %R
  99005797 | Ramya  Desai           | Weighted Moving Average
  99005769 | Rajiv Adak             | Triangular Moving Average
  99005807 | Aashi Lahori           | Relative Strength Index
@@ -41,6 +41,29 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
 |8| Unexpertise in any language | Helping the team members with the language they don't know |
 |9|De-motivation at any point | Motivating each other and working as a TEAM |
 
+## Programming Language and Build With
+### Following were used in Project
+-   C Language
+-   Visual Studio Code  
+## Tools 
+### Following were used to design UML Diagrams
+-   Lucidchart
+
+## How to Run
+### - On Linux
+1. Type following commands in terminal 
+   - sudo apt update
+   - sudo apt install build-essentials
+2. Open the terminal in Implementation folder.
+3. Run the following command 
+   - make
+   - make run
+### - On Windows
+1. Follow [this](https://code.visualstudio.com/docs/languages/cpp) tutorial to install gcc compiler to your windows machine.
+2. Open the project Implementation directory inside command prompt.
+3. Run the following commands inside command prompt
+   - make 
+   - make run
 
 ## Sample Output
 
