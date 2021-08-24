@@ -84,7 +84,7 @@ void emaStrategy(char *filePath){
 //takes the coloumn from where ema is to be calculated and the prices
 //check crossover of 14 em1 and 28 em2
 //returns true if 14 ema is above 28 ema and return false if vice-versa
-_Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray){
+_Bool emaCrossover(int em1, int em2, int crtday, float *coloumnArray){
     if ((ema(em1,(crtday), coloumnArray)>ema(em2,(crtday), coloumnArray))){        
         return true;
     }

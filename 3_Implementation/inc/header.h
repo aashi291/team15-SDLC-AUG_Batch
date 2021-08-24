@@ -99,7 +99,7 @@ void mfi(char * filePathMFI);
 
 float ema(int days, int crtday, float *columnArray);
 
-_Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray);
+_Bool emaCrossover(int em1, int em2, int crtday, float *coloumnArray);
 
 void emaStrategy(char *filePath);
 
