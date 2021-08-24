@@ -37,3 +37,7 @@ S.No. | Bug | Fix
 
 
 ## Sample Output
+![1](https://user-images.githubusercontent.com/86352920/130663088-9e84183e-32a6-405c-8365-65e640ddf692.png)
+![2](https://user-images.githubusercontent.com/86352920/130663119-b84d5808-2bca-4814-b8a7-96619132311a.png)
+![3](https://user-images.githubusercontent.com/86352920/130663164-ef027ec1-7512-4017-a8b3-34192e43786e.png)
+![Screenshot 2021-08-24 225102](https://user-images.githubusercontent.com/86352920/130663207-ebd86b06-8e21-4afe-a301-a540e6a67484.png)
