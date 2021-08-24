@@ -42,7 +42,6 @@ float findWillR(int,int ,int, int, float* ,float *, float *);
  * 
  * @return int 
  */
-int findLength(char *);   //to find the number of rows in file
 float highHigh(int ,int);
 float lowLow(int,int );
 

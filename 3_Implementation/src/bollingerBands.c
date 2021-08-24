@@ -65,7 +65,7 @@ float upperBand(int mulFactor,int noOfDaysMA,int presentDay,float* closPriceColu
     float upperBand=0;
     float middleBand=movingMiddleBand(noOfDaysMA,presentDay,closPriceColumn);
     float standardDeviation =stdDev(noOfDaysMA,presentDay,closPriceColumn);
-    upperBand = middleBand + mulFactor*standardDeviation;
+    upperBand = middleBand + (mulFactor*standardDeviation);
     return upperBand;
 }
 /**
@@ -82,7 +82,7 @@ float lowerBand(int mulFactor,int noOfDaysMA,int presentDay,float* closPriceColu
     float lowerBand=0;
     float lmiddleBand=movingMiddleBand(noOfDaysMA,presentDay,closPriceColumn);
     float lstandardDeviation =stdDev(noOfDaysMA,presentDay,closPriceColumn);
-    lowerBand = lmiddleBand + mulFactor*lstandardDeviation;
+    lowerBand = lmiddleBand - (mulFactor*lstandardDeviation);
     return lowerBand;
 }
 
