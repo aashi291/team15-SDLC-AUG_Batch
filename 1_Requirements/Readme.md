@@ -51,19 +51,21 @@ The utility can be used by giving .csv file of any stock which can be easily dow
 |    ID  |                     Description                          | HR_ID   |    Status    |
 |:------:|:--------------------------------------------------------:|:-------:|:------------:|
 | LR_01  | To read Individual columns of .csv files                 |  HR_01  | Implemented  |
-| LR_02  | Implement Moving Average Convergence Divergence strategy |  HR_02  | Implemented  |
-| LR_03  | Implement Rate of Change strategy                        |  HR_02  | Implemented  |
-| LR_04  | Implement Williams %R strategy                           |  HR_02  | Implemented  |
-| LR_05  | Implement Weighted Moving Average strategy               |  HR_02  | Implemented  |
-| LR_06  | Implement Triangular Moving Average strategy             |  HR_02  | Implemented  |
-| LR_07  | Implement Relative Strength Index strategy               |  HR_02  | Implemented  |
-| LR_08  | Implement Money Flow Index strategy                      |  HR_02  | Implemented  |
-| LR_09  | Implement Exponential Moving Average strategy            |  HR_02  | Implemented  |
-| LR_10  | Implement Bollinger Bands strategy                       |  HR_02  | Implemented  |
-| LR_11  | Implement Stochastic Indicator                           |  HR_02  | Implemented  |
-| LR_12  | Buy/Sell	                                                |  HR_03  |	Implemented  |
-| LR_13  | Price                                                   	|  HR_03  | Implemented  |
-| LR_14  | Date                                                     |	 HR_03  |	Implemented  |
-| LR_15  | Total Profit/Loss %                                      |	 HR_04  |	Implemented  |
-| LR_16  | Total Trades Closed                                     	|  HR_04  |	Implemented  |
-| LR_17  | Profit Factor	                                          |  HR_04  | Implemented  |
+| LR_02  | Implement Simple Moving Average strategy                 |  HR_02  | Implemented  |
+| LR_03  | Implement Moving Average Convergence Divergence strategy |  HR_02  | Implemented  |
+| LR_04  | Implement Rate of Change strategy                        |  HR_02  | Implemented  |
+| LR_05  | Implement Williams %R strategy                           |  HR_02  | Implemented  |
+| LR_06  | Implement Weighted Moving Average strategy               |  HR_02  | Implemented  |
+| LR_07  | Implement Triangular Moving Average strategy             |  HR_02  | Implemented  |
+| LR_08  | Implement Relative Strength Index strategy               |  HR_02  | Implemented  |
+| LR_09  | Implement Money Flow Index strategy                      |  HR_02  | Implemented  |
+| LR_10  | Implement Exponential Moving Average strategy            |  HR_02  | Implemented  |
+| LR_11  | Implement Bollinger Bands strategy                       |  HR_02  | Implemented  |
+| LR_12  | Implement Stochastic Indicator                           |  HR_02  | Implemented  |
+| LR_13  | Buy to Buy Call                                          |  HR_03  |	Implemented  |
+| LR_14  | Sell to Sell	Call                                        |  HR_03  |	Implemented  |
+| LR_15  | Price of Stock at particular date                       	|  HR_03  | Implemented  |
+| LR_16  | Date at the time of buy or sell                          |  HR_03  |	Implemented  |
+| LR_17  | Total Profit/Loss %                                      |  HR_04  |	Implemented  |
+| LR_18  | Total Trades                                           	|  HR_04  |	Implemented  |
+| LR_19  | Profit Factor	                                          |  HR_04  | Implemented  |
