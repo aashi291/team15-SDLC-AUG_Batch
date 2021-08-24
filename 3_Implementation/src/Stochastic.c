@@ -1,3 +1,18 @@
+/**
+ * @file Stochastic.c
+ * @author Pushkar Pramod Wani (pushkar.wani@ltts.com)
+ * @PS No. 99005816
+ * @brief  Indicator
+ * @version 0.1
+ * @date 2021-08-24
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
+
+
+
 #include "Stochastic_header.h"
 
 
