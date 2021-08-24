@@ -1,75 +1,4 @@
-/* #include "header.h"
- 
- void mfi(char * filePathMFI)
- {
-     int i;
-     FILE *file_pointer = fopen(filePathMFI,"r"); // This is to open the .csv file path and assign it to pointer for the further processing
-
-    float *closePriceValues = readColumn(file_pointer,3); // Here is 3 is the close price column in the .csv file which is required for 
-    //float *highPrice = readColumn(file_pointer,3);
-    //float *lowPrice = readColumn(file_pointer,4);
-    float highRate=0.7;
-    //float typicalPrice[383],rawMoney[383];
-
-    float mfi[382]; //an array for calculating and storing the mfi
-    float closeP[382];// an array for storing the close price
-    char buyDate[382][10];// an array to store the dates of the sales
-    int countB=0;// count the buy price
-    for(i=1;i<383;i++) // loop to extract the data
-    {
-        closeP[i-1]=closePriceValues[i];// extracting data from file
-        
-        //printf("%f\n",closePriceValues[i]);
-        
-    }
-    //free(filePath);
-
-  // /* for(i=0;i<382;i++) 
-    // printf("%f\n",closeP[i]);
-    //
-
-    printf("\n\n\n");
-   
-     
-     for (i = 0; i < 382; i++) //calculating MFI
-     {
-        mfi[i]=(100-(10/3+(closeP[i]/100*highRate))*1.07);
-     }
-     
-     printf("The days in which the stock were over bought are (MFI>80): BUY\n");
-    for(i=0;i<382;i++) //displaying the dates in which the stocks were over bought
-      {
-          //printf("%f\n",mfi[i]);
-        if(mfi[i]>85.00)
-        {
-            char *date = readDate(filePathMFI,i);// storing the date 
-            printf("\t%s\t\n", date);//displaying the date
-        }
-
-      }
-
-    printf("\n\n\nThe days in which the stock were over sold are (MFI<50): SELL \n");
-    for(i=0;i<382;i++) //displaying the dates in which the stocks were over sold
-      {
-          //printf("%f\n",mfi[i]);
-        if(mfi[i]<75.00)
-        {
-            char *date = readDate(filePathMFI,i);//storing the date 
-            printf("\t%s\t\n", date);// displaying the date
-        }
-
-      }
-
-
-
- }   
-
-
-
-------------------------------------------------current mfi*/
-
-
- #include "header.h"
+#include "header.h"
  
  void mfi(char * filePathMFI)
  {
@@ -201,7 +130,7 @@
     
 
        FILE *file_pointer3 = fopen(filePathMFI,"r");
-       float *volume = readColumn(file_pointer3,11);
+       float *volume = readColumn(file_pointer3,8);
 
        for(i=1;i<383;i++) // loop to extract the data
     {
@@ -220,14 +149,14 @@
      }
 
        
+       
      for(i=0;i<382;i++)
      {
         rawMoney[i]=typicalPrice[i]*volumeP[i];
 
      } 
 
-     
-
+      
 
       for(i=1;i<382;i++)
       {
@@ -242,21 +171,26 @@
         // printf("%f\n",up_down[i]);
 
        int count=0;
-       float sum=0; 
+       float sum=0.0; 
       for(i=14;i<382;i++)
       {
         for(int j=i-13;j<i+1;j++)
         {
-          if(up_down[j-1]==1)
+          if(up_down[j-1]==1.0)
           {
               sum=sum+rawMoney[j];
+              //printf("raw money=%f\n",rawMoney[j]);// just a test case need to remove
           }
         }
         positive14[count]=sum;
         sum=0;
         count++;
       }
-   
+
+      //for(i=0;i<367;i++) 
+        // printf("%f\n",positive14[i]);
+      
+      //printf("\n\n");
 
        count=0;
         sum=0; 
@@ -277,7 +211,7 @@
 
 
     //for(i=0;i<367;i++) 
-      //   printf("%f\n",negetive14[i]);
+      // printf("%f\n",negetive14[i]);
 
 
      for(i=0;i<367;i++)
@@ -287,34 +221,44 @@
 
       //for(i=0;i<367;i++) 
         // printf("%f\n",mfr[i]);
+      int mfiV[367];
+     /*   calculate mfi
+     for(i=0;i<367;i++)
+     {
+       mfi[i]=(100-(100/(1+mfr[i])));
+     } */
 
      for(i=0;i<367;i++)
      {
-       mfi[i]=(100-(100/1+mfr[i]))*-1;
-     } 
+       mfiV[i]=mfiCalculator(mfr[i]);
+     }
 
      //for(i=0;i<367;i++) 
-       // printf("%f\n",mfi[i]);
-
-     printf("The days in which the stock were over sold are (MFI<20): SELL\n"); 
-     for(i=0;i<367;i++)
-     {
-       if(mfi[i]>7.00)
-        {
-            char *date = readDate(filePathMFI,i+14);// storing the date 
-            printf("\t%s\t\tSELL\t\tProfit: %f %% \n", date,((highP[i+14]-lowP[i+14])/lowP[i+14])*100);//displaying the date
-        }
-     }   
+       // printf("%d\n",mfiV[i]);
 
       printf("\n\n\n");
 
-      printf("The days in which the stock were over bought are (MFI>80): BUY\n");
+      int high1,high2,count1=0;
+     printf("The days in which the stock are underflow (MFI<20): SELL\n\n"); 
+     for(i=0;i<367;i++)
+     {
+       if(mfiV[i]<20)
+        {
+            char *date = readDate(filePathMFI,(383-i-14));// storing the date 
+            printf("\t%s\t\tHigh: %f\t\tLow: %f\t\t Close:%f\n\n", date,highP[i+14],lowP[i+14],closeP[i+14]);//displaying the date
+        }
+     }
+     
+      printf("\n\n\n");
+
+      printf("The days in which the stock were overflow are (MFI>80): BUY\n\n");
       for(i=0;i<367;i++)
      {
-       if(mfi[i]<0.20)
+       if(mfiV[i]>80)
         {
-            char *date = readDate(filePathMFI,i+14);// storing the date 
-            printf("\t%s\t\tBUY\t\tProfit: %f %% \n", date,((highP[i+14]-lowP[i+14])/lowP[i+14])*100);
+            char *date = readDate(filePathMFI,(383-i-14));// storing the date 
+            printf("\t%s\t\tHigh: %f\t\tLow: %f\t\t Close:%f\n\n", date,highP[i+14],lowP[i+14],closeP[i+14]);//displaying the date
+            //printf("\t%s\t\tSELL\t\tProfit: %f %% \n", date,((highP[i+14]-lowP[i+14])/lowP[i+14])*100);
         }
      }
  }
