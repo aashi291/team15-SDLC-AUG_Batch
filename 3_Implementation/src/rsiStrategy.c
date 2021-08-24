@@ -74,7 +74,7 @@ void rsiStrategy(char *filePath){
     totalL = (totalL==0)?1:totalL;
     profitFactor = totalP/totalL;
     profitblprcnt = (profitbl/(tradeNo))*100;
-    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo), profitblprcnt, totalpl, profitFactor);
+    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo), profitblprcnt, totalpl, profitFactor);
 
 }
 
