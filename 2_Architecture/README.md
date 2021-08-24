@@ -13,6 +13,9 @@
 
 ## Low Level Behavioral Diagrams
 
+### Simple Moving Average
+![SMA](https://user-images.githubusercontent.com/86200682/130635339-c6a030ef-a0d8-49aa-86b0-fe9a65361926.jpeg)
+
 ### Exponential Moving Average
 ![Low Level Behavioral Diagram for EMA](https://user-images.githubusercontent.com/86200682/130348113-32181bff-84de-438c-be01-72cd89704ff1.jpeg)
 
@@ -22,14 +25,8 @@
 ### Williams %R
 ![Low Level Behavioral Diagram for WillR](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/WillR_B.png)
 
-
 ### Relative Strength Index
 ![RSI (2)](https://user-images.githubusercontent.com/86605697/130458802-9816c612-dea3-40b4-bd3b-ab424c73e4f7.png)
-
-
-
-
-
 
 ### Stochastic Indicator
 ![Low Level Behavioral Diagram for Stochastic Indicator](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/888d066dc76ad7c78cc4f33b09749bc6894b95c4/2_Architecture/Structural%20stochastic.jpeg)
