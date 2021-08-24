@@ -15,7 +15,7 @@
 |   `ID7`   |   Indicator used for Bollinger Bands Strategy             | lowerBand(2,20,361,close)                                             | 1469.00298 |   | Scenario based |
 |   `ID8`   |   Indicator used for Triangular Moving Average Strategy   | TMA-Triangular Moving Average(26,10,close)                            | 2798       |   | Scenario based |
 |   `ID9`   |   Indicator used in ROC strategy                          | roc(20,10,close)                                                      | 6.4407     |   | Scenario based |
-|   `ID10`  |   MFI Indicator                                           | mfi(ArrayName)                                                        | 78.1977    |   | Scenario based |
+|   `ID10`  |   MFI Indicator                                           | mfi(ArrayName)                                                        | 78.1977    |PASS   | Scenario based |
 |   `ID11`  |   Indicator used in Weighted moving average Strategy      | WMA(10,20,close)                                                      | 2096.5     |   | Scenario based |
 |   `ID12`  |   Stochastic Oscillator                                   | funforK(14,369,close,HIGH,LOW)                                        | 64.3270    |   | Scenario based |
 
@@ -30,7 +30,7 @@
 |   `ID4`   |   TMA-Triangular Moving Average   | Data from .csv file           | Buy at crossover, when TMA of previous day < price of previous day Sell at crossover, when TMA of previous day > price of previous day    |   |  |
 |   `ID5`   |   ROC-Rate Of Change            | Data from .csv file         | Sell at ROC>0 Buy at ROC<0    |   |  |
 |   `ID6`   |   emaStrategy                   | Data from .csv file         | Buy when EMA(14)>EMA(28) Sell when EMA(14)<EMA(28)    |   |  |
-|   `ID7`   |   MFI Indicator                 | Data from .csv file         | Buy When MFI<20 Sell When MFI>80    | Buy When MFI<20Sell When MFI>80  | Scenario based |
+|   `ID7`   |   MFI Indicator                 | Data from .csv file         | Buy When MFI>80 Sell When MFI>20    |   | Scenario based |
 |   `ID8`   |   wmaStrategy                   | Data from .csv file         | Buy when WMA(14)>WMA(28) Sell when WMA(14)<WMA(28)    |   |  |
 |   `ID9`   |   Stochastic                    | Data from .csv file         | If K<20 && D<20 && K<D --> BUY ; IF K>80 && D>80 &&K>D --> SELL    |   | Scenario based |
 |   `ID10`   |   RSI Strategy                    | Data from .csv file         | If RSI<30 --> BUY ; IF RSI>70 --> SELL    |   | Scenario based |
