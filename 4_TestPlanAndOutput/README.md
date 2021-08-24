@@ -6,18 +6,18 @@
 
 |    ID  |                     Description                          | Expected input | Expected output | Actual output | Type of test |
 |:------:|:--------------------------------------------------------:|:--------------:|:---------------:|:-------------:|:------------:|
-|   `ID1`   |   Indicator used in Exponential moving average            | ema(26,10,close)                                                      | 2776.48    |   | Scenario based |
-|   `ID2`   |   Indicator used in William%R strategy                    | William%R(100,14,close{previous day,highOfLast14days,lowOfLast14days) | 48.618     |   | Scenario based |
-|   `ID3`   |   Indicator used in William%R strategy                    | DMA(100,close)                                                        | 2718.1775  |   | Scenario based |
-|   `ID4`   |   Indicator used in macd Strategy                         | macd(12,26,10,close)                                                  | 70.93      |   | Scenario based |
-|   `ID5`   |   Indicator used in rsi Strategy                          | rsi(14,10,high,low)                                                   | 50.7496    |   | Scenario based |
-|   `ID6`   |   Indicator used for Bollinger Bands Strategy             | upperBand(2,20,361,close)                                             | 1774.471   |   | Scenario based |
-|   `ID7`   |   Indicator used for Bollinger Bands Strategy             | lowerBand(2,20,361,close)                                             | 1469.00298 |   | Scenario based |
-|   `ID8`   |   Indicator used for Triangular Moving Average Strategy   | TMA-Triangular Moving Average(26,10,close)                            | 2798       |   | Scenario based |
-|   `ID9`   |   Indicator used in ROC strategy                          | roc(20,10,close)                                                      | 6.4407     |   | Scenario based |
-|   `ID10`  |   MFI Indicator                                           | mfi(ArrayName)                                                        | 78.1977    |   | Scenario based |
-|   `ID11`  |   Indicator used in Weighted moving average Strategy      | WMA(10,20,close)                                                      | 2096.5     |   | Scenario based |
-|   `ID12`  |   Stochastic Oscillator                                   | funforK(14,369,close,HIGH,LOW)                                        | 64.3270    |   | Scenario based |
+|   `ID1`   |   Indicator used in Exponential moving average            | ema(26,10,close)                                                      | 2776.48    | PASS  | Scenario based |
+|   `ID2`   |   Indicator used in William%R strategy                    | William%R(100,14,close{previous day,highOfLast14days,lowOfLast14days) | 48.618     | PASS  | Scenario based |
+|   `ID3`   |   Indicator used in William%R strategy                    | DMA(100,close)                                                        | 2718.1775  | PASS  | Scenario based |
+|   `ID4`   |   Indicator used in macd Strategy                         | macd(12,26,10,close)                                                  | 70.93      | PASS  | Scenario based |
+|   `ID5`   |   Indicator used in rsi Strategy                          | rsi(14,10,high,low)                                                   | 50.7496    | PASS  | Scenario based |
+|   `ID6`   |   Indicator used for Bollinger Bands Strategy             | upperBand(2,20,361,close)                                             | 1774.471   | PASS  | Scenario based |
+|   `ID7`   |   Indicator used for Bollinger Bands Strategy             | lowerBand(2,20,361,close)                                             | 1469.00298 | PASS  | Scenario based |
+|   `ID8`   |   Indicator used for Triangular Moving Average Strategy   | TMA-Triangular Moving Average(26,10,close)                            | 2798       | Not updated  | Scenario based |
+|   `ID9`   |   Indicator used in ROC strategy                          | roc(20,10,close)                                                      | 6.4407     | FAIL  | Scenario based |
+|   `ID10`  |   MFI Indicator                                           | mfi(ArrayName)                                                        | 78.1977    | PASS  | Scenario based |
+|   `ID11`  |   Indicator used in Weighted moving average Strategy      | WMA(10,20,close)                                                      | 2096.5     | FAIL  | Scenario based |
+|   `ID12`  |   Stochastic Oscillator                                   | funforK(14,369,close,HIGH,LOW)                                        | 64.3270    | FAIL  | Scenario based |
 
 
 ### Strategies:
