@@ -12,6 +12,7 @@ void testMFI(void);
 void testmacd(void);
 void testWilliamR(void);
 void testroc(void);
+void testrsi(void);
 //array to test sma and crossover functions
 float *close;
 const char *filePath = "LTTS.csv";
