@@ -28,7 +28,7 @@ int main(){
     
 
     int strategyChoice; // this selects a particular strategy from a given list to be processed
-    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n6. Weighted Moving Average \n7.MACD \n8.rsi \n9.William%%R\nEnter your choice: "); // update your strategy in the menu
+    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n6. Weighted Moving Average \n7.MACD \n8.rsi \n9.William%%R\n10.Rate Of Change \nEnter your choice: "); // update your strategy in the menu
     scanf("%d",&strategyChoice);
     if(strategyChoice == 0)
         {
@@ -60,7 +60,8 @@ int main(){
                 break;
         case 9: WilliamR(filePath);
                 break;
-    
+        case 10: rocStrategy(filePath)  ; 
+                break;
     }
 
     printf("\nThe Performance of the strategies on historical data is just a probable indication but final decision of Trade is subject to personal discretion!!");

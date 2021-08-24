@@ -46,7 +46,9 @@ src/macd.c\
 src/macdStrategy.c\
 src/rsi.c\
 src/rsiStrategy.c\
-src/findLength.c
+src/findLength.c\
+src/roc.c\
+src/rocStrategy.c
 
 # All test source files
 TEST_SRC = test/Test.c\
