@@ -103,11 +103,7 @@ _Bool emaCrossover( int em1, int em2, int crtday, float *coloumnArray);
 
 float macd(int fastLength, int slowLength, int crtday, float *columnArray);
 
-float macdSignal(int fastLength, int slowLength, int signalLength, int crtday, float *columnArray);
-
-float macdHistogram(int fastLength, int slowLength, int signalLength, int crtday, float *columnArray);
-
-_Bool histogramCondition(int fastLength, int slowLength, int signalLength, int crtday, float *columnArray);
+_Bool macdCondition(int fastLength, int slowLength, int crtday, float *columnArray);
 
 void macdStrategy(char *filePath);
 

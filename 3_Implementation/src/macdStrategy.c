@@ -18,7 +18,7 @@ void macdStrategy(char *filePath){
     if(choice==2)
     {
         printf("\nEnter two different number of days for simple moving average :");
-        scanf("%d %d %d",&fastLength,&slowLength,&signalLength);
+        scanf("%d %d",&fastLength,&slowLength);
 
     }
 
@@ -44,7 +44,7 @@ void macdStrategy(char *filePath){
     for (int i=(close[0]-slowLength); i>0; i--)
     {
 
-        if (histogramCondition(fastLength, slowLength, signalLength, i, close) && !intrade ){
+        if (macdCondition(fastLength, slowLength, i, close) && !intrade ){
             char *date = readDate(filePath,i+1);
             buyp=close[i];
 
@@ -53,7 +53,7 @@ void macdStrategy(char *filePath){
 
             intrade = true;
         }
-        else if (!histogramCondition(fastLength, slowLength, signalLength, i, close) && intrade){
+        else if (!macdCondition(fastLength, slowLength, i, close) && intrade){
             char *date = readDate(filePath,i+1);
             sellp=close[i];
 
@@ -75,17 +75,16 @@ void macdStrategy(char *filePath){
     profitblprcnt = (profitbl/(tradeNo))*100;
     printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo), profitblprcnt, totalpl, profitFactor);
 
-    free(filePath);
 }
 
 //takes the coloumn from where sma is to be calculated and the prices
 //check crossover of 14 fastLength and 28 slowLength
 //returns true if 14 sma is above 28 sma and return false if vise-versa
-_Bool histogramCondition(int fastLength, int slowLength, int signalLength, int crtday, float *columnArray){
-    if (macdHistogram(fastLength, slowLength, signalLength, crtday, columnArray)>0){        
+_Bool macdCondition(int fastLength, int slowLength, int crtday, float *columnArray){
+    if (macd(fastLength, slowLength, crtday, columnArray)>0){        
         return true;
     }
-    else if (macdHistogram(fastLength, slowLength, signalLength, crtday, columnArray)<0){
+    else if (macd(fastLength, slowLength, crtday, columnArray)<0){
         return false;
     }
 }
