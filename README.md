@@ -23,10 +23,10 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005797 | Ramya  Desai           | Weighted Moving Average
  99005769 | Rajiv Adak             | Triangular Moving Average
  99005807 | Aashi Lahori           | Relative Strength Index
- 99005834 | Sourav  Sudarshan      | Money Flow Index Indicator| 0 | 0 | 6 | 6 |
+ 99005834 | Sourav  Sudarshan      | Money Flow Index Indicator
  99005762 | Kunal Kishore Mozarkar | Exponential Moving Average
  99005791 | S  Rekha               | Bollinger Bands
- 99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 1 | 3 | 1 | 0 |
+ 99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 0 | 3 | 1 | 0 |
 
 ## Challenges Faced and How Was It Overcome
 | Sr. No. | Challenges | Overcome |
@@ -52,4 +52,5 @@ S.No. | Bug | Fix
 ![Screenshot 2021-08-24 224955](https://user-images.githubusercontent.com/86200682/130662278-5b29b5c2-6f43-4be1-8ccc-f32bde221179.png)
 ![Screenshot 2021-08-24 225031](https://user-images.githubusercontent.com/86200682/130662177-e54ec2e3-13ef-4827-aba3-cd77797ccf3a.png)
 ![Screenshot 2021-08-24 225102](https://user-images.githubusercontent.com/86200682/130662248-519fe23e-8428-4cf4-8329-56d562eeb6f5.png)
+![22-42-28](https://user-images.githubusercontent.com/86352920/130666485-9e3f5627-9d86-424d-bd04-3764e93eb9f9.gif)
 
