@@ -27,6 +27,7 @@ int main(){
     RUN_TEST(testmacd);
     RUN_TEST(testWilliamR);
     RUN_TEST(testroc);
+    RUN_TEST(testrsi);
     return UNITY_END();
 }
 
@@ -75,4 +76,10 @@ void testroc(void)
    // TEST_ASSERT_EQUAL_FLOAT(6.4407,roc(20,10,close));
     TEST_ASSERT_FLOAT_WITHIN(5.000,6.4407,roc(20,10,close));
 
+}
+
+void testrsi(void)
+{ 
+    //TEST_ASSERT_EQUAL_FLOAT(50.7496,rsi(14,10,HIGH,LOW));
+    TEST_ASSERT_FLOAT_WITHIN(5.00,50.7496,rsi(14,10,HIGH,LOW));
 }
