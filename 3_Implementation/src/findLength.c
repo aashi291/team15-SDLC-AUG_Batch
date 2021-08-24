@@ -1,4 +1,4 @@
-#include "header.c"
+#include "header.h"
 
 
 int findLength(char *filePath)
