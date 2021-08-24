@@ -45,7 +45,24 @@
 |   Input data            | .csv file from NSE      | Read and identify values for close,high low etc.   | Read and identify data from .csv file  | technical|
 |   Select strategy       | User select options only from the displayed options          | Performance parameters of selected strategy    | Performance is calculated and displayed | technical |
   
- 
+ ## Boundary Based Test Plan
+  
+|                     Description                          | Expected input | Expected output | Actual output | Type of test |
+|:--------------------------------------------------------:|:--------------:|:---------------:|:-------------:|:------------:|
+|   Path to the input data          | .csv file in 3_Implementation folder    | File path will be detected | PASS  | Boundary|
+|   Path to the input data      | .csv file not present in 3_Implementation folder    | Invalid error message will be displayed | PASS  | Boundary|
+|   Input file name     | Filename.csv | Valid input and list of strategies must be displayed | PASS  | Boundary|
+|   Input file name     | anything else other than Filename.csv | Invalid error message will be displayed and user will be prompted to enter the valid filename  | PASS  | Boundary|
+|   Selection of strategies from the displayed list    | Input of numbers 1 to 11 | User input gets accepted | PASS  | Boundary|
+|   Selection of strategies from the displayed list    | any input other than numbers from 1 to 11 | Invalid error message will be displayed and user will be prompted to enter the valid number | PASS  | Boundary|
+|   Prompt to execute the strategy either with default/External Input Values    | Input of number 1  | Strategy is executed with default values | PASS  | Boundary|
+|   Prompt to execute the strategy either with default/External Input Values      | Input of number 2 | User will be prompted to enter the input based on choosen strategies | PASS  | Boundary|
+|   Prompt to execute the strategy either with default/External Input Values      | any input other than 1 or 2  | Invalid error message will be displayed and user will be prompted to enter a valid number  |   | Boundary|
+  
+  
+  
+
+
 
 
 
