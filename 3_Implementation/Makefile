@@ -49,7 +49,7 @@ src/rsiStrategy.c\
 src/findLength.c
 
 # All test source files
-TEST_SRC = test/smaTest.c\
+TEST_SRC = test/Test.c\
 unity/unity.c\
 
 # All include folders with header files
