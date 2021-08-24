@@ -140,6 +140,8 @@ int mfiCalculator(float mfrValue);
 
 float wma(int days, int crtday, float *coloumnArray);
 
+_Bool wmaCrossover( int wm1, int wm2, int crtday, float *coloumnArray);
+
 void wmaStrategy(char *file);
 
 
