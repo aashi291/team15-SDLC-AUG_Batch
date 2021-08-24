@@ -28,6 +28,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005791 | S  Rekha               | Bollinger Bands|1|4|||
  99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 0 | 3 | 1 | 0 |
 
+![](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/bdfc8c228de4f8e5a5fe3379d5151d37f0c15369/6_PhotosAndVideos/Screenshot%202021-08-24%20235301.png)
 ## Challenges Faced and How Was It Overcome
 | Sr. No. | Challenges | Overcome |
 |--- |--- |--- |
