@@ -24,7 +24,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005769 | Rajiv Adak             | Triangular Moving Average|1||||
  99005807 | Aashi Lahori           | Relative Strength Index
  99005834 | Sourav  Sudarshan      | Money Flow Index Indicator
- 99005762 | Kunal Kishore Mozarkar | Exponential Moving Average|1|1|||
+ 99005762 | Kunal Kishore Mozarkar | Exponential Moving Average|1|2|1|1|
  99005791 | S  Rekha               | Bollinger Bands|1|4|||
  99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 0 | 3 | 1 | 0 |
 
