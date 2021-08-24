@@ -139,5 +139,6 @@ float wma(int days, int crtday, float *coloumnArray);
 
 void wmaStrategy(char *file);
 
+int mfiCalculator(float mfrValue);
 
 #endif
