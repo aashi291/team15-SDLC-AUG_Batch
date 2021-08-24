@@ -135,9 +135,6 @@ _Bool rocCrossover( int roc1, int todaysClosingprice, float *coloumnArray);
 
 void rocStrategy(char *file);
 
-float wma(int days, int crtday, float *coloumnArray);
-
-void wmaStrategy(char *file);
 
 
 #endif
