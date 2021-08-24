@@ -25,14 +25,15 @@ int main(){
     //char *filePath = "LTTS.csv";//to store file path, comment this while using scanf
     //printf("%s\n\n",filePath);//comment this while using scanf
 
-    
+    while(1){
 
     int strategyChoice; // this selects a particular strategy from a given list to be processed
-    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n6. Weighted Moving Average \n7.MACD \n8.rsi \n9.William%%R\n10.Rate Of Change \nEnter your choice: "); // update your strategy in the menu
+    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n6. Weighted Moving Average \n7.MACD \n8.rsi \n9.William%%R \n10.Rate Of Change \n0.Exit\n\nEnter your choice: "); // update your strategy in the menu
     scanf("%d",&strategyChoice);
     if(strategyChoice == 0)
         {
-          printf("Wrong input");
+          printf("Closing Program.....\n");
+          free(filePath);
           return 0;
         }
     while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3 && strategyChoice!=4 && strategyChoice!=5 && strategyChoice!=6 && strategyChoice!=7 && strategyChoice!=8 && strategyChoice!=9 && strategyChoice!=10) // update your respective strategy choice here as well
@@ -68,7 +69,7 @@ int main(){
 
     printf("\nThe Performance of the strategies on historical data is just a probable indication but final decision of Trade is subject to personal discretion!!");
     
-    
+    }
     free(filePath);
     return 0;
 }
