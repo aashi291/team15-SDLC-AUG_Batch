@@ -49,8 +49,7 @@ src/rsiStrategy.c\
 src/findLength.c\
 src/roc.c\
 src/rocStrategy.c\
-src/wma.c\
-src/wmaStrategy.C\
+
 src/mfiCalculator.c
 
 # All test source files
