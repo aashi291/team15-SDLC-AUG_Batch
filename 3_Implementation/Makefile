@@ -48,7 +48,9 @@ src/rsi.c\
 src/rsiStrategy.c\
 src/findLength.c\
 src/roc.c\
-src/rocStrategy.c
+src/rocStrategy.c\
+src/wma.c\
+src/wmaStrategy.C
 
 # All test source files
 TEST_SRC = test/Test.c\
