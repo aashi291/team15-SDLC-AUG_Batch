@@ -82,7 +82,10 @@ void Stochastic_Strategy(char * filePath)
     printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %f ||\t|| Profit Factor: %0.3f ||\n\n", (SSTradeNo-2), SSProfitablePercent,SSTotalpl, SSProfitFactor);
 
     fclose(file_ptr);
-    free(filePath);
+    //free(filePath);
+    free(HIGH) ;
+    free(LOW);
+    free(close);
     return;
 
 }
