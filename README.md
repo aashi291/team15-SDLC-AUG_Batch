@@ -26,7 +26,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005834 | Sourav  Sudarshan      | Money Flow Index Indicator
  99005762 | Kunal Kishore Mozarkar | Exponential Moving Average
  99005791 | S  Rekha               | Bollinger Bands
- 99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 0 | 3 | 1 | 0 |
+ 99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 1 | 3 | 1 | 0 |
 
 ## Challenges Faced and How Was It Overcome
 | Sr. No. | Challenges | Overcome |
