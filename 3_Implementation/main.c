@@ -28,7 +28,7 @@ int main(){
     while(1){
 
     int strategyChoice; // this selects a particular strategy from a given list to be processed
-    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n6. Weighted Moving Average \n7.MACD \n8.rsi \n9.William%%R \n10.Rate Of Change \n0.Exit\n\nEnter your choice: "); // update your strategy in the menu
+    printf("\nSelect a strategy from the given options\n\n1.Simple Moving Average\n2.Bollinger Bands \n3.Stochastic \n4.Money Flow Index \n5.Exponential Moving Average \n6.Weighted Moving Average \n7.MACD \n8.rsi \n9.William%%R \n10.Rate Of Change \n0.Exit\n\nEnter your choice: "); // update your strategy in the menu
     scanf("%d",&strategyChoice);
     if(strategyChoice == 0)
         {
