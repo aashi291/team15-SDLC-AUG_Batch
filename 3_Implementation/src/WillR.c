@@ -32,6 +32,12 @@ int WilliamR(char *filePath)
     {
         printf("\nEnter number of days for dma and number of days for william%%R :");
         scanf("%d%d",&dm,&will);
+        if((dm<=3 || dm>=500) || WillR<=2 || WillR >=500)
+        {
+            printf("\nInvalid input. Continuing with default values\n\n");
+            will =14;
+            dm = 100;
+        } 
     }
     if(choice==1)
     {
@@ -59,17 +65,11 @@ int WilliamR(char *filePath)
         high = malloc(length*sizeof(float));
         memcpy(high,coloumn2,length*sizeof(float));
 
-        //for(int i=0; i<length;i++)
-        //printf("high %f" , high[i]);
         
         float *coloumn3 = readColumn(file,4);
         low = malloc(length*sizeof(float));
         memcpy(low,coloumn3,length*sizeof(float));
-        /*
-        for(int i=0; i<length;i++)
-        //printf("low %f" , low[i]);
-        free(low);
-        */
+       
     /*
     tradeNo = number of trades, buyp = buying price, sellp = selling price,
     pl = profit or loss in that trade, totalpl = total profit or loss at the end
@@ -127,7 +127,6 @@ int WilliamR(char *filePath)
     free(close);
     free(high);
     free(low);
-    //free(coloumn1); free( coloumn2); free(coloumn3);
     return 0;
 }
 
@@ -149,7 +148,7 @@ float findWillR(int dm, int will,int length ,int today, float *close, float *hig
      }
     }
         WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow)); //formula for williams%r
-   // printf("\nwilliam%%R %f " , WillR*100); 
+  // printf("\nwilliam%%R %f " , WillR*100); 
     return WillR*100;       //return value to be checked for buy or sell
 
 }
@@ -159,7 +158,6 @@ float findDMA(int dm , int today , float *close,int length)
     
      float sum = 0; // sum of all days price
     if(today<=(length-dm)){
-       // printf("\ndma entered");
         for (int i = today-5; i<(today+dm+5); i++){
             sum += close[i];
         }
