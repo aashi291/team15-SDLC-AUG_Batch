@@ -13,6 +13,7 @@ void testmacd(void);
 void testWilliamR(void);
 void testroc(void);
 void testrsi(void);
+void testEma(void);
 //array to test sma and crossover functions
 float *close;
 float *high;
@@ -35,6 +36,7 @@ int main(){
     RUN_TEST(testWilliamR);
     RUN_TEST(testroc);
     RUN_TEST(testrsi);
+    RUN_TEST(testEma);
     return UNITY_END();
 }
 
@@ -89,4 +91,8 @@ void testrsi(void)
 { 
     //TEST_ASSERT_EQUAL_FLOAT(50.7496,rsi(14,10,HIGH,LOW));
     TEST_ASSERT_FLOAT_WITHIN(5.00,50.7496,rsi(14,10,high,low));
+}
+void testEma(void)
+{
+    TEST_ASSERT_FLOAT_WITHIN(4.000,2812.38,ema(12,10,close));
 }
