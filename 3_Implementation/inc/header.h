@@ -138,4 +138,9 @@ void rocStrategy(char *file);
 
 int mfiCalculator(float mfrValue);
 
+float wma(int days, int crtday, float *coloumnArray);
+
+void wmaStrategy(char *file);
+
+
 #endif
