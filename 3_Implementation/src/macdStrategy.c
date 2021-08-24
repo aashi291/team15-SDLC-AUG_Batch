@@ -8,7 +8,7 @@ void macdStrategy(char *filePath){
     int slowLength = 26;
     int signalLength = 9;
 
-    printf("\nThree different number of days are required for MACD calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");
+    printf("\nFast Lenght and Slow Length are required for MACD calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");
     scanf("%d",&choice);
     while (choice!=1 && choice!=2)
     {
@@ -17,7 +17,7 @@ void macdStrategy(char *filePath){
     }
     if(choice==2)
     {
-        printf("\nEnter two different number of days for simple moving average :");
+        printf("\nEnter Fast Length and Slow Length for MACD :");
         scanf("%d %d",&fastLength,&slowLength);
 
     }
@@ -77,9 +77,10 @@ void macdStrategy(char *filePath){
 
 }
 
-//takes the coloumn from where sma is to be calculated and the prices
-//check crossover of 14 fastLength and 28 slowLength
-//returns true if 14 sma is above 28 sma and return false if vise-versa
+/*takes the coloumn from where macd is to be calculated and the prices
+check macd
+returns true if macd is greater than 0 and return false if vise-versa
+*/
 _Bool macdCondition(int fastLength, int slowLength, int crtday, float *columnArray){
     if (macd(fastLength, slowLength, crtday, columnArray)>0){        
         return true;
