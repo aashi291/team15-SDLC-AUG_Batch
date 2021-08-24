@@ -18,13 +18,13 @@ Folder                | Description
 SF No.    |          Name          |    Features    | Issues Raised |Issues Resolved|No Test Cases|Test Case Pass
 ----------|------------------------|----------------|----------------|---------------|-------------|--------------
  99005763 | Abhay  Sahu            | Moving Average Convergence Divergence |10|3|2|2|
- 99005772 | Shreyashi  Chaudhari   | Rate Of Change
+ 99005772 | Shreyashi  Chaudhari   | Rate Of Change|0|0|1|1|
  99005839 | Alna Satheesh          | Williams %R
  99005797 | Ramya  Desai           | Weighted Moving Average
  99005769 | Rajiv Adak             | Triangular Moving Average|1||||
  99005807 | Aashi Lahori           | Relative Strength Index
  99005834 | Sourav  Sudarshan      | Money Flow Index Indicator
- 99005762 | Kunal Kishore Mozarkar | Exponential Moving Average|1|2|1|1|
+ 99005762 | Kunal Kishore Mozarkar | Exponential Moving Average|1|1|||
  99005791 | S  Rekha               | Bollinger Bands|1|4|||
  99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 0 | 3 | 1 | 0 |
 
