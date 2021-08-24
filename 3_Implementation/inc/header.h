@@ -127,4 +127,7 @@ void rsiStrategy(char *filePath);
 
 int WilliamR(char* filepath);
 
+int findLength(char *);   //to find the number of rows in file
+
+
 #endif
