@@ -22,8 +22,16 @@ void rsiStrategy(char *filePath){
 
     FILE *file = fopen(filePath,"r");
     float *close = readColumn(file,7);
-    float *HIGH = readColumn(file,3); // Accessing HIGH column from .csv file
-    float *LOW = readColumn(file,4); // Accessing LOW column from .csv file
+    //float *HIGH = readColumn(file,3); // Accessing HIGH column from .csv file
+    //float *LOW = readColumn(file,4); // Accessing LOW column from .csv file
+    FILE *file_pointer1 = fopen(filePath,"r");
+       //FILE *file_pointer2 = fopen(filePath,"r");
+       float *HIGH = readColumn(file_pointer1,3);
+    FILE *file_pointer2 = fopen(filePath,"r");
+       //FILE *file_pointer2 = fopen(filePath,"r");
+       float *LOW = readColumn(file_pointer2,4);
+
+
 
     /*
     tradeNo = number of trades, buyp = buying price, sellp = selling price,

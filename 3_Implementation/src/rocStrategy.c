@@ -47,8 +47,8 @@ void rocStrategy(char *filePath){
             char *date = readDate(filePath,i+1);
             buyp=close[i];
 
-            printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
             tradeNo++;
+            printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
             
             intrade = true;
         }

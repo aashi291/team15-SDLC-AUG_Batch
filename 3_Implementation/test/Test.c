@@ -45,7 +45,7 @@ int main(){
 
 void testSma(void)
 {
-    TEST_ASSERT_EQUAL_FLOAT(2848.829,sma(12,10,close));
+    TEST_ASSERT_FLOAT_WITHIN(5.000,2844.38,sma(12,10,close));
 }
 void testBollingerBands(void)
 {

@@ -19,9 +19,9 @@ void smaStrategy(char *filePath){
         printf("\nEnter two different number of days for simple moving average :");
         scanf("%d%d",&sm1,&sm2);
 
-        while(sm1>sm2)
+        while((sm1>sm2) || (sm1<0) || (sm1>500)  || (sm2<0) || (sm2>500))
         {
-            printf("\nEnter the lower number of days first and then the higher number of days: ");
+            printf("\nEnter the lower number of days first and then the higher number of days both should be within 0 to 500: ");
             scanf("%d%d",&sm1,&sm2);
         }
     }
