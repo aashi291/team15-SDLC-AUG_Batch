@@ -35,7 +35,7 @@ int main(){
           printf("Wrong input");
           return 0;
         }
-    while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3 && strategyChoice!=4 && strategyChoice!=5 && strategyChoice!=6 && strategyChoice!=7 && strategyChoice!=8 && strategyChoice!=9) // update your respective strategy choice here as well
+    while(strategyChoice!=1 && strategyChoice!=2 && strategyChoice!=3 && strategyChoice!=4 && strategyChoice!=5 && strategyChoice!=6 && strategyChoice!=7 && strategyChoice!=8 && strategyChoice!=9 && strategyChoice!=10) // update your respective strategy choice here as well
     {
         printf("\nInvalid choice!\nPlease Enter a valid choice from the above given options only : ");
         scanf("%d",&strategyChoice);
