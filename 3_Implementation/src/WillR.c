@@ -1,7 +1,7 @@
 /**
  * @file WillR.c
  * @author Alna Satheesh (alna.satheesh@ltts.com)
- * @brief 
+ * @brief fille for the william%R strategy.
  * @version 0.1
  * @date 2021-08-22
  * 
@@ -9,27 +9,17 @@
  * 
  */
 
-char *filePath = "LTTS.csv";
-   // sm1=14;
+char *filePath ;
     float DMA100;
     float WillR;
     
 
-/**
- * @file WillR.c
- * @author Alna Satheesh (alna.satheesh@ltts.com.com)
- * @brief 
- * @version 0.1
- * @date 2021-08-23
- * 
- * @copyright Copyright (c) 2021
- * 
- */
 #include "WillR.h"
 
 
-int WilliamR()
+int WilliamR(char *filePath)
 {
+    printf("\n %s", filePath);
     int choice, will , dm;
        printf("\nTwo different number of days are required for Williama%%R calculations. \n\n1.Default Values\n2.External Input\nPlease enter a choice :");
     scanf("%d",&choice);
@@ -58,7 +48,7 @@ int WilliamR()
 
         float *close=NULL,*high= NULL,*low= NULL;
 
-        int length = findLength();
+        int length = findLength(filePath);
 
         close = malloc(length*sizeof(float));
         memcpy(close,coloumn1,length*sizeof(float));
@@ -107,7 +97,7 @@ int WilliamR()
             char *date = readDate(filePath,today+1);
             buyp=close[today];
 
-           //printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
+           printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
             tradeNo++;
             intrade = true;
         }
@@ -123,7 +113,7 @@ int WilliamR()
             totalL += abs((pl<0)?pl:0);
             profitbl += ((pl>0)?1:0);
             
-            //printf("\tSELL\t\t%s\t\t%0.2f\t\t%0.2f\n\n", date, sellp, pl);
+            printf("\tSELL\t\t%s\t\t%0.2f\t\t%0.2f\n\n", date, sellp, pl);
             
             intrade = false;
           
@@ -159,7 +149,7 @@ float findWillR(int dm, int will,int length ,int today, float *close, float *hig
      }
     }
         WillR = ((highestHigh-close[today-1] )/(highestHigh-lowestLow)); //formula for williams%r
-    printf("\nwilliam%%R %f " , WillR*100); 
+   // printf("\nwilliam%%R %f " , WillR*100); 
     return WillR*100;       //return value to be checked for buy or sell
 
 }
@@ -177,7 +167,7 @@ float findDMA(int dm , int today , float *close,int length)
     else{
         return -1;
     }
-    printf(" DMA %f " , sum/dm);
+    //printf(" DMA %f " , sum/dm);
     return (sum/dm); //returning Simple moving average
     
 }
@@ -192,7 +182,7 @@ bool buyCondition(int DMA100, int WillR, float *close, int i)
 return NULL;
 }
 
-int findLength()
+int findLength(char *filePath)
 {
     int count = 0;  // Line counter (result)
     

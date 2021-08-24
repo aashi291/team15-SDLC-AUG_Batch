@@ -125,5 +125,6 @@ _Bool rsiCrossover( int rs1, int crtday, float *high ,float *low);
  */
 void rsiStrategy(char *filePath);
 
+int WilliamR(char* filepath);
 
 #endif
