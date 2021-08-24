@@ -83,7 +83,7 @@ void Stochastic_Strategy(char * filePath)
 
     fclose(file_ptr);
     //free(filePath);
-    free(HIGH) ;
+    free(HIGH);
     free(LOW);
     free(close);
     return;
