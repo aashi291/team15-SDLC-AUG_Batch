@@ -74,7 +74,7 @@ int WilliamR(char *filePath)
     tradeNo = number of trades, buyp = buying price, sellp = selling price,
     pl = profit or loss in that trade, totalpl = total profit or loss at the end
     */
-    int tradeNo = 1;
+    int tradeNo = 0;
     float buyp = 0, sellp = 0, pl = 0, totalpl = 0;
     /*
     totalP = total profit made in profitable trades
@@ -96,9 +96,9 @@ int WilliamR(char *filePath)
         if (buyCondition(DMA100,WillR,close,today) && !intrade ){
             char *date = readDate(filePath,today+1);
             buyp=close[today];
-
-           printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
             tradeNo++;
+           printf("%d\tBUY\t\t%s\t\t%0.2f\n", tradeNo, date, buyp);
+            
             intrade = true;
         }
         else if (!buyCondition(DMA100, WillR,close,today) && intrade){
@@ -122,8 +122,8 @@ int WilliamR(char *filePath)
     
     totalL = (totalL==0)?1:totalL;
     profitFactor = totalP/totalL;
-    profitblprcnt = (profitbl/(tradeNo-2))*100;
-    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo-2), profitblprcnt, totalpl, profitFactor);
+    profitblprcnt = (profitbl/(tradeNo))*100;
+    printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo), profitblprcnt, totalpl, profitFactor);
     free(close);
     free(high);
     free(low);
