@@ -14,6 +14,7 @@ void testWilliamR(void);
 void testroc(void);
 void testrsi(void);
 void testEma(void);
+void testfindLength(void);
 //array to test sma and crossover functions
 float *close;
 float *high;
@@ -37,6 +38,7 @@ int main(){
     RUN_TEST(testroc);
     RUN_TEST(testrsi);
     RUN_TEST(testEma);
+    RUN_TEST(testfindLength);
     return UNITY_END();
 }
 
@@ -78,6 +80,10 @@ void testWilliamR(void)
     float low1 [100]={2,909.00,2927.05,2909.45,2850.00,2881.15,2879.45,2868.60,2867.50,2886.00,2860.35,2875.55,2865.10,2825.95,2820.00,2815.00,2720.00,2734.15,2753.85,2835.00,2843.20,2806.00,2806.90,2742.60,2715.00,2758.00,2730.00,2688.00,2667.00,2649.35,2676.00,2696.40,2694.00,2678.45,2610.65,2592.50,2585.00,2610.25,2599.20,2630.95,2560.00,2517.25,2531.55,2528.00,2476.05,2492.10,2510.30,2485.00,2560.00,2557.80,2640.00};
     //TEST_ASSERT_FLOAT_WITHIN((-20,20),findWillR(50, 14,50,10, close1,high1 , low1));
     TEST_ASSERT_FLOAT_WITHIN(6000,6000,findDMA(20, 10 , close1,50));
+}
+void testfindLength(void)
+{
+    TEST_ASSERT_EQUAL(381,findLength(filePath));
 }
 
 void testroc(void)
