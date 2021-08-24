@@ -3,11 +3,10 @@
 float roc(int n, int todaysClosingprice, float *coloumnArray)
 {
 
-   float value; 
-   int i;
+   float value=0; 
     if(todaysClosingprice<=(coloumnArray[0]-n)){
         
-        value = (coloumnArray[i] - coloumnArray[i+n])/coloumnArray[i+n];
+        value = (coloumnArray[todaysClosingprice] - coloumnArray[todaysClosingprice+n])/coloumnArray[todaysClosingprice+n];
         
     }
     else{
