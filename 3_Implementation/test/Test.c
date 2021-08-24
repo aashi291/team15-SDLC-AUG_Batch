@@ -15,12 +15,18 @@ void testroc(void);
 void testrsi(void);
 //array to test sma and crossover functions
 float *close;
+float *high;
+float *low;
 const char *filePath = "LTTS.csv";
 int main(){
     //array to test sma and crossover functions
     const char *filePath = "LTTS.csv";
     FILE *file = fopen(filePath,"r");
+    FILE *file1 = fopen(filePath,"r");
+    FILE *file2 = fopen(filePath,"r");
     close = readColumn(file,7);
+    high = readColumn(file1,3);
+    low = readColumn(file2,4);
     UNITY_BEGIN();
     RUN_TEST(testSma);
     RUN_TEST(testBollingerBands);
@@ -34,15 +40,15 @@ int main(){
 
 void testSma(void)
 {
-    TEST_ASSERT_EQUAL_FLOAT(2848.829,sma(12,10,close));
-    TEST_ASSERT_FLOAT_WITHIN(5.000,2844.38,sma(12,10,close));
+    //TEST_ASSERT_EQUAL_FLOAT(2844.38,sma(12,10,close));
+    TEST_ASSERT_FLOAT_WITHIN(5.000,2812.38,sma(12,10,close));
 }
 void testBollingerBands(void)
 {
-    TEST_ASSERT_EQUAL_FLOAT(1774.471,upperBand(2,20,361,close));
-    TEST_ASSERT_EQUAL_FLOAT(1469.00298,lowerBand(2,20,361,close));
-    TEST_ASSERT_FLOAT_WITHIN(2.000,1774.471,upperBand(2,20,361,close));
-    TEST_ASSERT_FLOAT_WITHIN(2.000,1469.00298,lowerBand(2,20,361,close));
+    TEST_ASSERT_EQUAL_FLOAT(1738.921,upperBand(2,20,361,close));
+    TEST_ASSERT_EQUAL_FLOAT(1451.094,lowerBand(2,20,361,close));
+    //TEST_ASSERT_FLOAT_WITHIN(2.000,1774.471,upperBand(2,20,361,close));
+    //TEST_ASSERT_FLOAT_WITHIN(2.000,1469.00298,lowerBand(2,20,361,close));
     TEST_ASSERT_EQUAL(-3,upperBand(2,20,365,close));
     TEST_ASSERT_EQUAL(1,lowerBand(2,20,365,close));
     TEST_ASSERT_EQUAL(-1,movingMiddleBand(20,365,close));
@@ -82,5 +88,5 @@ void testroc(void)
 void testrsi(void)
 { 
     //TEST_ASSERT_EQUAL_FLOAT(50.7496,rsi(14,10,HIGH,LOW));
-    TEST_ASSERT_FLOAT_WITHIN(5.00,50.7496,rsi(14,10,HIGH,LOW));
+    TEST_ASSERT_FLOAT_WITHIN(5.00,50.7496,rsi(14,10,high,low));
 }
