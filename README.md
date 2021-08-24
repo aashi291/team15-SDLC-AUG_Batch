@@ -25,7 +25,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
  99005807 | Aashi Lahori           | Relative Strength Index | 0 | 0 | 1 | 1 |
  99005834 | Sourav  Sudarshan      | Money Flow Index Indicator | 0 | 0 | 6 | 6 |
  99005762 | Kunal Kishore Mozarkar | Exponential Moving Average|1|2|1|1|
- 99005791 | S  Rekha               | Bollinger Bands|1|4|||
+ 99005791 | S  Rekha               | Bollinger Bands|1|4|1|1|
  99005816 | Pushkar Pramod Wani    | Stochastic Indicator| 0 | 3 | 1 | 0 |
 
 ![](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/bdfc8c228de4f8e5a5fe3379d5151d37f0c15369/6_PhotosAndVideos/Screenshot%202021-08-24%20235301.png)
