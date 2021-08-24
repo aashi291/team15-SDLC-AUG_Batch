@@ -50,6 +50,9 @@ src/findLength.c\
 src/roc.c\
 src/rocStrategy.c
 
+src/rocStrategy.c\
+
+src/mfiCalculator.c
 
 # All test source files
 TEST_SRC = test/Test.c\

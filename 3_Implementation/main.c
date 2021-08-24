@@ -54,6 +54,8 @@ int main(){
                 break;
         //case 6: wmaStrategy(filePath); 
                 //break;
+       // case 6: wmaStrategy(filePath); 
+               // break;
         case 7: macdStrategy(filePath);
                 break;   
         case 8: rsiStrategy(filePath);
