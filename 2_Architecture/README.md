@@ -35,7 +35,7 @@
 ![Low Level Behavioral Diagram for ROC](https://user-images.githubusercontent.com/86352920/130568774-f542e5a4-1146-4b60-9452-70746e513a87.png)
 
 ### Moving Average Convergence Divergence
-![Low level Behavioral Diagram for MACD](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/badd9a7456b47ccec33f351f4fc3097523c8fc76/2_Architecture/MACD.jpeg)
+![Low level Behavioral Diagram for MACD](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/86e803c27cbeb4ebea37d25c15cd3aa6caa3ae34/2_Architecture/MACD.jpeg)
 
 ### Triangular Moving Average 
 ![Low level Behavioral Diagram for TMA](https://github.com/rajivadak/team15-SDLC-AUG_Batch/blob/main/2_Architecture/TMA.png?raw=true)
