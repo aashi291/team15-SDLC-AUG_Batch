@@ -15,7 +15,7 @@
 |   `ID7`   |   Indicator used for Bollinger Bands Strategy             | lowerBand(2,20,361,close)                                             | 1469.00298 |   | Scenario based |
 |   `ID8`   |   Indicator used for Triangular Moving Average Strategy   | TMA-Triangular Moving Average(26,10,close)                            | 2798       |   | Scenario based |
 |   `ID9`   |   Indicator used in ROC strategy                          | roc(20,10,close)                                                      | 6.4407     |   | Scenario based |
-|   `ID10`  |   MFI Indicator                                           | mfi(ArrayName)                                                        | 78.1977    |PASS   | Scenario based |
+|   `ID10`  |   MFI Indicator                                           | mfiCalculator(ArrayName)                                                        | 78.1977    |PASS   | Scenario based |
 |   `ID11`  |   Indicator used in Weighted moving average Strategy      | WMA(10,20,close)                                                      | 2096.5     |   | Scenario based |
 |   `ID12`  |   Stochastic Oscillator                                   | funforK(14,369,close,HIGH,LOW)                                        | 64.3270    |   | Scenario based |
 
