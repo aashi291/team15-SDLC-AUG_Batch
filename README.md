@@ -19,7 +19,7 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
 ----------|------------------------|----------------|----------------|---------------|-------------|--------------
  99005763 | Abhay  Sahu            | Moving Average Convergence Divergence 
  99005772 | Shreyashi  Chaudhari   | Rate Of Change
- 99005839 | Alna Satheesh          | Williams %R
+ 99005839 | Alna Satheesh          | Williams %R        | 2    |2    |2    |2
  99005797 | Ramya  Desai           | Weighted Moving Average
  99005769 | Rajiv Adak             | Triangular Moving Average
  99005807 | Aashi Lahori           | Relative Strength Index
@@ -40,10 +40,6 @@ SF No.    |          Name          |    Features    | Issues Raised |Issues Reso
 |7| Negotiating with views | Sharing ideas, views and concluded the problem with a solution which would benefit the whole team |
 |8| Unexpertise in any language | Helping the team members with the language they don't know |
 |9|De-motivation at any point | Motivating each other and working as a TEAM |
-
-## Project Enhancements carried out
-S.No. | Bug | Fix
----- | ---- | ----
 
 
 ## Sample Output
