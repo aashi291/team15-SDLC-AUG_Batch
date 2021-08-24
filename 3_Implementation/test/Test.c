@@ -9,9 +9,9 @@ void tearDown(){}
 void testSma(void);
 void testBollingerBands(void);
 void testMFI(void);
+void testmacd(void);
 //array to test sma and crossover functions
 float *close;
-//array to test sma and crossover functions
 const char *filePath = "LTTS.csv";
 int main(){
     //array to test sma and crossover functions
@@ -22,6 +22,7 @@ int main(){
     RUN_TEST(testSma);
     RUN_TEST(testBollingerBands);
     RUN_TEST(testMFI);
+    RUN_TEST(testmacd);
     return UNITY_END();
 }
 
@@ -50,4 +51,9 @@ void testMFI(void)
     TEST_ASSERT_EQUAL(10, mfiCalculator(0.114763051));
     TEST_ASSERT_EQUAL(86, mfiCalculator(6.174203173));
     TEST_ASSERT_EQUAL(15, mfiCalculator(0.180448517));
+}
+
+void testmacd(void)
+{
+    TEST_ASSERT_FLOAT_WITHIN(4.000,70.93,macd(12,26,10,close));
 }
