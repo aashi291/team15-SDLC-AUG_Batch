@@ -48,7 +48,7 @@ src/rsi.c\
 src/rsiStrategy.c
 
 # All test source files
-TEST_SRC = test/testMain.c\
+TEST_SRC = test/smaTest.c\
 unity/unity.c\
 
 # All include folders with header files

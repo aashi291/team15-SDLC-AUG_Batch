@@ -79,7 +79,6 @@ void smaStrategy(char *filePath){
     profitblprcnt = (profitbl/(tradeNo))*100;
     printf("\n|| Total Trades: %d ||\t|| Profitable Trades percentage: %0.2f %% ||\t|| Total P/L: %0.2f ||\t|| Profit Factor: %0.3f ||\n\n", (tradeNo), profitblprcnt, totalpl, profitFactor);
 
-    free(filePath);
 }
 
 //takes the coloumn from where sma is to be calculated and the prices
